@@ -1,0 +1,42 @@
+.modal-overlay {
+    animation: fadeIn 0.5s ease-in-out;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    padding: 0 30px;
+    z-index: 10;
+}
+
+.modal-container {
+	background-color: $card-background-color;
+	min-width: 250px;
+	min-height: 150px;
+	color: $color-black;
+	position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.modal-wrapper {
+	width: 100%;
+	display: block;
+}
+
+@keyframes fadeIn {
+    0%   {
+        opacity: 0;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75% { 
+        opacity: 0.75;
+    }
+    100% { 
+        opacity: 1;
+    }
+}

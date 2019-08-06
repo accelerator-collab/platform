@@ -1,0 +1,42 @@
+.featurette {
+    align-items: center;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        
+        .featurette__content {
+            order: 2;
+        }
+    
+        .featurette__image {
+            order: 1;
+        }
+	}
+}
+
+.featurette--reverse {
+
+    .featurette__content {
+        order: 2;
+    }
+
+    .featurette__image {
+        order: 1;
+    }
+}
+
+.featurette__content {
+    padding: 0 15px;
+}
+
+.featurette__image {
+    margin-bottom: 15px;
+}

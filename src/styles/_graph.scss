@@ -1,0 +1,18 @@
+.bar-horizontal,
+.bar-vertical {
+	width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.bar-horizontal {
+	display: flex;
+}
+
+.bar-item {
+    // margin-right: 1px;
+    display: flex;
+	transition: all 0.5s ease;
+	height: 24px;
+	padding-right: 10px;
+}
