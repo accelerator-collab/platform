@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {Header} from 'accelerator-lib';
-import Sidebar from './components/Sidebar/Sidebar';
+import {Header, Footer} from 'accelerator-lib';
+import 'deloitteaccelerator/assets/styles/master.css';
+
 import HomePage from './pages/HomePage';
 import LayoutPage from './pages/LayoutPage';
 
@@ -23,6 +24,12 @@ const LINKS = [
   },
 ];
 
+const socials = [
+  {icon: 'facebook', url: 'https://www.facebook.com/'},
+  {icon: 'instagram', url: 'https://www.instagram.com/?hl=en'},
+  {icon: 'linkedin', url: 'https://www.instagram.com/?hl=en'}
+];
+
 function App() {
   return (
     <Router>
@@ -31,7 +38,8 @@ function App() {
         links={LINKS} 
         logo='https://via.placeholder.com/150x150' />
         <Route exact path="/" component={HomePage} />
-        <Route path="/layouts" component={LayoutPage} />
+        <Route exact path="/layouts" component={LayoutPage} />
+      <Footer socialMediaLink={socials} footerLink={LINKS} />
     </Router>
   );
 }
