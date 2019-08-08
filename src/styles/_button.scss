@@ -1,0 +1,45 @@
+@mixin bgColor($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+}
+
+.btn {
+	border-radius: 0.2rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+	// button types
+	&-danger {
+		@include bgColor($color-red);
+		color: $color-white;
+	}
+	&-default {
+		@include bgColor($color-white);
+		color: $color-black;
+	}
+	&-primary {
+		@include bgColor($color-blue);
+		color: $color-white;
+	}
+	&-success {
+		@include bgColor($color-green);
+		color: $color-white;
+	}
+	// button sizes
+	&-xs {
+		font-size: 0.8rem;
+		padding: 0.3rem;
+	}
+	&-sm {
+		font-size: 1rem;
+		padding: 0.4rem;
+	}
+	&-md {
+		font-size: 1.2rem;
+		padding: 0.5rem;
+	}
+	&-lg {
+		font-size: 1.4rem;
+		padding: 0.6rem;
+	}
+}
