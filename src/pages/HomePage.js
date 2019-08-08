@@ -6,9 +6,24 @@ class HomePage extends Component {
     render() {
         const content = 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.';
         const image = 'https://via.placeholder.com/400x400';
+        const ctaLinks = [
+            {
+                ctaDesc: 'CTA Title 1',
+                ctaIcon: 'arrow-right',
+                ctaSize: 'lg',
+                tag: Link,
+            },
+            {
+                ctaDesc: 'CTA Title 2',
+                ctaIcon: 'car-side',
+                ctaSize: 'md',
+                tag: Link,
+            },
+        ];
+
         return (
             <main className="home-page">
-                <HeroBanner />
+                <HeroBanner ctaLinks={ctaLinks} />
                 <Layout className="layout--space-between">
                     <CTA 
                         ctaSize="lg"

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'accelerator-style/assets/styles/master.css';
+import 'deloitteaccelerator/assets/styles/master.css';
 import './styles/main.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
