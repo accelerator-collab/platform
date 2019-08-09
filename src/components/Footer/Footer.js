@@ -12,7 +12,7 @@ class Footer extends Component {
                 <ul className="footer__container__social__section">
                   {socialMediaLink.length && (socialMediaLink.map(soc =>
                       <li key={soc.icon} className='footer__container__social_section_item'>
-                        <a href={soc.url} className={`fa fa-${soc.icon}`}>&nbsp;</a>
+                        <a href={soc.url} className={`fab fa-${soc.icon}`}>&nbsp;</a>
                       </li>
                   ))}
                 </ul>
