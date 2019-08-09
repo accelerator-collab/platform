@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {Header, Footer} from 'accelerator-lib';
-import 'deloitteaccelerator/assets/styles/master.css';
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import HomePage from './pages/HomePage';
 import LayoutPage from './pages/LayoutPage';

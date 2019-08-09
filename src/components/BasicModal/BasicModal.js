@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Modal extends Component {
+class BasicModal extends Component {
     tapOutside(e) {
         e.preventDefault();
 
@@ -30,4 +30,4 @@ class Modal extends Component {
     }
 }
 
-export default Modal;
+export default BasicModal;

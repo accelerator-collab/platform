@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Card, Layout, Dropdown, BasicModal, Graph } from 'accelerator-lib';
+
+import Card from '../components/Card/Card';
+import Layout from '../components/Layout/Layout';
+import Dropdown from '../components/Dropdown/Dropdown';
+import BasicModal from '../components/BasicModal/BasicModal';
+import Graph from '../components/Graph/Graph';
 import Button from '../components/Button/Button';
 
 class LayoutPage extends Component {

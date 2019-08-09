@@ -32,6 +32,8 @@ li {
 // Common
 @import 'common';
 // Components
+@import 'header';
+@import 'footer';
 @import 'card';
 @import 'cta';
 @import 'dropdown';
@@ -41,3 +43,9 @@ li {
 @import 'hero-banner';
 @import 'graph';
 @import 'button';
+
+// ///////////////////
+// // Font Awesome //
+// ///////////////////
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');

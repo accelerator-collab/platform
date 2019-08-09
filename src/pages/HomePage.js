@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import {HeroBanner, Layout, CTA, Featurette} from 'accelerator-lib';
+
+import HeroBanner from '../components/HeroBanner/HeroBanner';
+import Layout from '../components/Layout/Layout';
+import CTA from '../components/CTA/CTA';
+import Featurette from '../components/Featurette/Featurette';
 import { Link } from "react-router-dom";
 
 class HomePage extends Component {
