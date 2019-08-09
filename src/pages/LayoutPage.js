@@ -86,7 +86,7 @@ class LayoutPage extends Component {
                             toggleItems={toggleItems} />
                     </Card>
                 </Layout>
-                <Layout>
+                {/* <Layout>
                     <Card>
                         <ul>
                             <li>1. Bar Horizontal</li>
@@ -101,7 +101,7 @@ class LayoutPage extends Component {
                         </ul>
                         <Graph graphType='donut' donutData={donutData} />
                     </Card>
-                </Layout>
+                </Layout> */}
             </React.Fragment>
         );
     }

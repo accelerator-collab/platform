@@ -24,9 +24,18 @@ ul, li {
     display: flex;
 }
 
+.wrapper__content {
+    margin-left: 80px;
+}
+
+.header {
+    margin-left: 80px;
+}
+
 // Common
 @import 'common';
 // Components
+@import 'overlay';
 @import 'card';
 @import 'cta';
 @import 'dropdown';
@@ -35,3 +44,4 @@ ul, li {
 @import 'modal';
 @import 'hero-banner';
 @import 'graph';
+@import 'sidebar';
