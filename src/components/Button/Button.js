@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
 	render() {
-		const { type, text, size } = this.props;
+		const { type, text, size, disabled } = this.props;
 
 		return (
-			<button className={`btn btn--${type} btn--${size}`} disabled={this.props.disabled}>
+			<button className={`btn btn--${type} btn--${size}`} disabled={disabled}>
 				{text}
 			</button>
 		);
