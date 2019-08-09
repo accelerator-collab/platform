@@ -56,6 +56,7 @@ class LayoutPage extends Component {
 					{btnSizes.map((size) => {
 						return <Button type="primary" text="primary" size={size} />;
 					})}
+					<Button type="primary" text="disabled" disabled />
 				</Layout>
 				<Layout>
 					<Card>This is the Card 1.</Card>
