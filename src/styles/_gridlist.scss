@@ -1,0 +1,12 @@
+.gridlist {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.gridlist__container {
+    width: 500px;
+    height: 450px;
+}
