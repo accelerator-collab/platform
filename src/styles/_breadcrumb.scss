@@ -3,14 +3,14 @@
 	background-color: $card-background-color;
 	width: 100%;
 
-	&--object,
-	&--divider {
+	&__object,
+	&__divider {
 		padding: 0.5rem 0.2rem 0.5rem 0.2rem;
 	}
-	&--link {
+	&__link {
 		font-weight: bold;
 	}
-	&--divider:last-child {
+	&__divider:last-child {
 		display: none;
 	}
 }
