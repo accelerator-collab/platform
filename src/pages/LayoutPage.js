@@ -6,6 +6,7 @@ import Dropdown from '../components/Dropdown/Dropdown';
 import BasicModal from '../components/BasicModal/BasicModal';
 import Graph from '../components/Graph/Graph';
 import Button from '../components/Button/Button';
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 
 class LayoutPage extends Component {
 	constructor(props) {
@@ -50,8 +51,29 @@ class LayoutPage extends Component {
 		const btnTypes = [ 'default', 'danger', 'primary', 'success' ];
 		const btnSizes = [ 'xs', 'sm', 'md', 'lg' ];
 
+		const breadcrumbHistory = [
+			{
+				title: 'Home',
+				path: '#',
+				isActive: false
+			},
+			{
+				title: 'Details',
+				path: '#',
+				isActive: false
+			},
+			{
+				title: 'Contact',
+				path: '#',
+				isActive: true
+			}
+		];
+
 		return (
 			<React.Fragment>
+				<Layout>
+					<Breadcrumb history={breadcrumbHistory} />
+				</Layout>
 				<Layout>
 					{btnTypes.map((type) => {
 						return <Button type={type} text={type} size="sm" />;

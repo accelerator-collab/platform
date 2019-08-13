@@ -30,11 +30,11 @@ li {
 }
 
 .wrapper__content {
-    margin-left: 80px;
+	margin-left: 80px;
 }
 
 .header {
-    margin-left: 80px;
+	margin-left: 80px;
 }
 
 // Common
@@ -53,6 +53,7 @@ li {
 @import 'graph';
 @import 'sidebar';
 @import 'button';
+@import 'breadcrumb';
 
 // ///////////////////
 // // Font Awesome //
