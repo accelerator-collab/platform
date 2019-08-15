@@ -1,0 +1,48 @@
+.sidebar {
+	background-color: #f5f5f5; // 030615 hover state bg // BF914B hover state of icon
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+	overflow-y: auto;
+	transition: all 0.3s ease-in-out;
+    width: 300px;
+    z-index: 9999;
+
+ 	&--compressed {
+		overflow: hidden;
+	 	width: 80px;
+	}
+}
+
+.sidebar__list-item {
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.sidebar__list-link {
+    align-items: center;
+    display: flex;
+    padding: 15px 25px 15px;
+}
+
+.sidebar__list-name {
+    margin-left: 15px;;
+}
+
+.sidebar__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.sidebar__icon {
+    font-size: 24px;
+}

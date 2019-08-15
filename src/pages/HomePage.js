@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import { HeroBanner, Layout, CTA, Featurette } from 'accelerator-lib';
+
+import HeroBanner from '../components/HeroBanner/HeroBanner';
+import Layout from '../components/Layout/Layout';
+import CTA from '../components/CTA/CTA';
+import Featurette from '../components/Featurette/Featurette';
 import InputBox from '../components/Input/InputBox';
 import Pagination from '../components/Pagination/Pagination';
 import Checkbox from '../components/Checkbox/Checkbox';
+
+
+
+
 import { Link } from "react-router-dom";
 
 class HomePage extends Component {
