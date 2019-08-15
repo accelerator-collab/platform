@@ -4,11 +4,6 @@ import HeroBanner from '../components/HeroBanner/HeroBanner';
 import Layout from '../components/Layout/Layout';
 import CTA from '../components/CTA/CTA';
 import Featurette from '../components/Featurette/Featurette';
-import InputBox from '../components/Input/InputBox';
-import Pagination from '../components/Pagination/Pagination';
-import Checkbox from '../components/Checkbox/Checkbox';
-
-
 
 
 import { Link } from "react-router-dom";
@@ -29,24 +24,6 @@ class HomePage extends Component {
                 ctaIcon: 'car-side',
                 ctaSize: 'md',
                 tag: Link,
-            },
-        ];
-
-        const checkboxItems = [
-            {
-                id: 1,
-                name: "age",
-                label: " Age"
-            },
-            {
-                id: 2,
-                name: "name",
-                label: " Name"
-            },
-            {
-                id: 3,
-                name: "place",
-                label: " Place"
             },
         ];
 
@@ -87,16 +64,7 @@ class HomePage extends Component {
                         imageSrc={image}
                     />
                 </Layout>
-                <Layout>
-                    <InputBox></InputBox>
-                </Layout>
 
-                <Layout>
-                    <Pagination></Pagination>
-                </Layout>
-                <Layout>
-                    <Checkbox checkboxItems={checkboxItems} />
-                </Layout>
 
             </main>
         );
