@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import {HeroBanner, Layout, CTA, Featurette} from 'accelerator-lib';
+import { HeroBanner, Layout, CTA, Featurette } from 'accelerator-lib';
+import InputBox from '../components/Input/InputBox';
+import Pagination from '../components/Pagination/Pagination';
+import Checkbox from '../components/Checkbox/Checkbox';
 import { Link } from "react-router-dom";
 
 class HomePage extends Component {
@@ -21,29 +24,47 @@ class HomePage extends Component {
             },
         ];
 
+        const checkboxItems = [
+            {
+                id: 1,
+                name: "age",
+                label: " Age"
+            },
+            {
+                id: 2,
+                name: "name",
+                label: " Name"
+            },
+            {
+                id: 3,
+                name: "place",
+                label: " Place"
+            },
+        ];
+
         return (
             <main className="home-page">
                 <HeroBanner ctaLinks={ctaLinks} />
                 <Layout className="layout--space-between">
-                    <CTA 
+                    <CTA
                         ctaSize="lg"
                         ctaImage="https://via.placeholder.com/150x150"
-                        ctaDesc="Lorem ipsum is simply a dummy text. Bacon Ipsum is also a dummy text." 
+                        ctaDesc="Lorem ipsum is simply a dummy text. Bacon Ipsum is also a dummy text."
                         tag={Link} />
-                    <CTA 
+                    <CTA
                         ctaSize="lg"
                         ctaImage="https://via.placeholder.com/150x150"
-                        ctaDesc="Lorem ipsum is simply a dummy text. Bacon Ipsum is also a dummy text." 
+                        ctaDesc="Lorem ipsum is simply a dummy text. Bacon Ipsum is also a dummy text."
                         ctaIcon="caret-down"
                         tag={'p'} />
-                    <CTA 
+                    <CTA
                         ctaSize="lg"
                         ctaImage="https://via.placeholder.com/150x150"
                         ctaDesc="Lorem ipsum is simply a dummy text. Bacon Ipsum is also a dummy text."
                         tag={'p'} />
                 </Layout>
                 <Layout className="layout--column">
-                    <Featurette 
+                    <Featurette
                         reverse={true}
                         content={content}
                         imageSrc={image}
@@ -52,12 +73,23 @@ class HomePage extends Component {
                         content={content}
                         imageSrc={image}
                     />
-                    <Featurette 
+                    <Featurette
                         reverse={true}
                         content={content}
                         imageSrc={image}
                     />
                 </Layout>
+                <Layout>
+                    <InputBox></InputBox>
+                </Layout>
+
+                <Layout>
+                    <Pagination></Pagination>
+                </Layout>
+                <Layout>
+                    <Checkbox checkboxItems={checkboxItems} />
+                </Layout>
+
             </main>
         );
     }
