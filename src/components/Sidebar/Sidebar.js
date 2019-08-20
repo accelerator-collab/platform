@@ -5,11 +5,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
 
-        this.setDefaultState();
-    }
-
-    setDefaultState() {
-		this.state = {
+        this.state = {
 			isCompressed: false,
 		}
     }
