@@ -9,6 +9,7 @@ import Button from '../components/Button/Button';
 import InputBox from '../components/Input/InputBox';
 import Pagination from '../components/Pagination/Pagination';
 import Checkbox from '../components/Checkbox/Checkbox';
+import RadioButton from '../components/RadioButton/RadioButton';
 
 class LayoutPage extends Component {
     constructor(props) {
@@ -139,6 +140,9 @@ class LayoutPage extends Component {
                 </Layout>
                 <Layout>
                     <Checkbox checkboxItems={checkboxItems} />
+                </Layout>
+                <Layout>
+                    <RadioButton></RadioButton>
                 </Layout>
             </React.Fragment>
         );
