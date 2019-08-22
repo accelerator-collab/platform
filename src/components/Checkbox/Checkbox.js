@@ -21,7 +21,11 @@ class Checkbox extends Component {
         if (this.state.checkboxItems !== null) {
             checkboxItems = this.state.checkboxItems.map(checkboxItems => (
                 <div>
-                    <input onClick={this.onClickCheckbox.bind(this)} type="checkbox" id={checkboxItems.id} name={checkboxItems.name} />
+                    <input
+                        onClick={this.onClickCheckbox.bind(this)}
+                        type="checkbox"
+                        id={checkboxItems.id}
+                        name={checkboxItems.name} />
                     <label>{checkboxItems.label}</label>
                 </div>
             ));

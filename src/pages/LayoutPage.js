@@ -10,6 +10,8 @@ import InputBox from '../components/Input/InputBox';
 import Pagination from '../components/Pagination/Pagination';
 import Checkbox from '../components/Checkbox/Checkbox';
 import RadioButton from '../components/RadioButton/RadioButton';
+import RangeSlider from '../components/RangeSlider/RangeSlider';
+
 
 class LayoutPage extends Component {
     constructor(props) {
@@ -69,6 +71,25 @@ class LayoutPage extends Component {
                 id: 3,
                 name: "place",
                 label: " Place"
+            },
+        ];
+
+
+        const radioButtonOptns = [
+            {
+                value: "option1",
+                name: "option1",
+                label: "Option 1"
+            },
+            {
+                value: "option2",
+                name: "option2",
+                label: "Option 2"
+            },
+            {
+                value: "option3",
+                name: "option3",
+                label: "Option 3"
             },
         ];
 
@@ -149,8 +170,11 @@ class LayoutPage extends Component {
                         <Checkbox checkboxItems={checkboxItems} />
                     </Card>
                     <Card>
-                        <RadioButton></RadioButton>
+                        <RadioButton radioButtonOptns={radioButtonOptns} />
                     </Card>
+
+
+
                 </Layout>
 
             </React.Fragment>

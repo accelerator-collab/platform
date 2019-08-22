@@ -5,70 +5,50 @@ class RadioButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedOption: "option1"
+            selectedOption: "option1",
+            radioButtonOptns: props.radioButtonOptns
         };
     }
 
     handleOptionChange = changeEvent => {
         this.setState({
             selectedOption: changeEvent.target.value
+        }, function () {
+            console.log("You have submitted:", this.state.selectedOption);
         });
     };
 
-    handleFormSubmit = formSubmitEvent => {
-        formSubmitEvent.preventDefault();
-
-        console.log("You have submitted:", this.state.selectedOption);
-    };
 
     render() {
+
+        let radioButtonOptns;
+
+        if (this.state.radioButtonOptns !== null) {
+            radioButtonOptns = this.state.radioButtonOptns.map(radioButtonOptns => (
+                <div>
+                    <label>
+                        <input
+                            type="radio"
+                            name={radioButtonOptns.name}
+                            value={radioButtonOptns.value}
+
+                            checked={this.state.selectedOption === radioButtonOptns.value}
+                            onChange={this.handleOptionChange.bind(this)}
+                            className="form-check-input"
+                        />
+                        {radioButtonOptns.label}
+                    </label>
+                </div>
+            ));
+        }
+
         return (
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-sm-12">
-                        <form onSubmit={this.handleFormSubmit}>
-                            <div className="form-check">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value="option1"
-                                        checked={this.state.selectedOption === "option1"}
-                                        onChange={this.handleOptionChange}
-                                        className="form-check-input"
-                                    />
-                                    Option 1
-                    </label>
-                            </div>
-                            <div className="form-check">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value="option2"
 
-                                        checked={this.state.selectedOption === "option2"}
-                                        onChange={this.handleOptionChange}
-                                        className="form-check-input"
-                                    />
-                                    Option 2
-                    </label>
-                            </div>
-                            <div className="form-check">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value="option3"
-                                        checked={this.state.selectedOption === "option3"}
-                                        onChange={this.handleOptionChange}
-                                        className="form-check-input"
-                                    />
-                                    Option 3
-                    </label>
-                            </div>
+                        {radioButtonOptns}
 
-                        </form>
                     </div>
                 </div>
             </div>
