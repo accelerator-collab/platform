@@ -131,19 +131,28 @@ class LayoutPage extends Component {
                     </Card>
                 </Layout>
 
-                <Layout>
-                    <InputBox></InputBox>
-                </Layout>
+                <Card>
+                    <Layout>
+                        <InputBox></InputBox>
+                    </Layout>
+                </Card>
 
                 <Layout>
-                    <Pagination></Pagination>
+                    <Card>
+                        <Pagination></Pagination>
+                    </Card>
                 </Layout>
+
+
                 <Layout>
-                    <Checkbox checkboxItems={checkboxItems} />
+                    <Card>
+                        <Checkbox checkboxItems={checkboxItems} />
+                    </Card>
+                    <Card>
+                        <RadioButton></RadioButton>
+                    </Card>
                 </Layout>
-                <Layout>
-                    <RadioButton></RadioButton>
-                </Layout>
+
             </React.Fragment>
         );
     }

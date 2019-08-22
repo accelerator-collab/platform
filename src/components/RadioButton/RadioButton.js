@@ -46,6 +46,7 @@ class RadioButton extends Component {
                                         type="radio"
                                         name="react-tips"
                                         value="option2"
+
                                         checked={this.state.selectedOption === "option2"}
                                         onChange={this.handleOptionChange}
                                         className="form-check-input"
