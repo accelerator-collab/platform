@@ -10,6 +10,7 @@ class InputBox extends Component {
         return (
             <div>
                 <div className="searchInputContainer">
+                    <label>{this.props.label}</label>
                     <input type="text" className="form-control form-control-lg" placeholder="Search" />
                     <div className="iconBox">
                         <i className="fas fa-search" />
@@ -17,14 +18,15 @@ class InputBox extends Component {
                 </div>
 
                 <div className="inputWithIcon inputIconBg">
+                    <label>{this.props.label}</label>
                     <input type="text" placeholder={this.props.placeHolder} />
                     <i className="fas fa-user-alt fa-lg fa-fw" aria-hidden="true" />
                 </div>
 
-                <div className="float-container">
+                {/* <div className="float-container">
                     <label htmlFor="floatingInput" className="labelFloatingInput">{this.props.label}</label>
                     <input className="floatingInput" type="text"></input>
-                </div>
+                </div> */}
 
 
             </div >

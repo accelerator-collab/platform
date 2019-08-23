@@ -160,7 +160,7 @@ class LayoutPage extends Component {
 
                 <Layout>
                     <Card>
-                        <Pagination></Pagination>
+                        <Pagination ></Pagination>
                     </Card>
                 </Layout>
 
@@ -173,8 +173,12 @@ class LayoutPage extends Component {
                         <RadioButton radioButtonOptns={radioButtonOptns} />
                     </Card>
 
+                </Layout>
 
-
+                <Layout>
+                    <Card>
+                        <RangeSlider></RangeSlider>
+                    </Card>
                 </Layout>
 
             </React.Fragment>
