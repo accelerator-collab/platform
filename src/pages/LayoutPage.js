@@ -156,7 +156,7 @@ class LayoutPage extends Component {
 
 
                     <Card>
-                        <RadioButton defaultOption={radioButtonOptns[2].value} radioButtonOptns={radioButtonOptns} />
+                        <RadioButton defaultOption={radioButtonOptns[0].value} radioButtonOptns={radioButtonOptns} />
                     </Card>
 
                 </Layout>
@@ -166,9 +166,10 @@ class LayoutPage extends Component {
                         <h1>Default RangeSlider</h1>
                         <RangeSlider value={500} min={300} max={4000} />
                         <h1>Colored RangeSlider</h1>
-                        <RangeSlider rangeSliderStyle={'rangeSliderGreen'} value={500} min={300} max={4000} />
-                        <RangeSlider rangeSliderStyle={'rangeSliderRed'} value={500} min={300} max={4000} />
-                        <RangeSlider rangeSliderStyle={'rangeSliderBlue'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'vertical'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'rangeSlider rangeSlider--bgcolorGreen'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'rangeSlider rangeSlider--bgcolorRed'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'rangeSlider rangeSlider--bgcolorBlue'} value={500} min={300} max={4000} />
                     </Card>
                 </Layout>
 
