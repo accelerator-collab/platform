@@ -11,6 +11,11 @@ import Pagination from '../components/Pagination/Pagination';
 import Checkbox from '../components/Checkbox/Checkbox';
 import RadioButton from '../components/RadioButton/RadioButton';
 import RangeSlider from '../components/RangeSlider/RangeSlider';
+import CheckBoxTwo from '../components/Checkbox/CheckBox2';
+import styles from '../styles/_checkbox.scss';
+import styles2 from '../styles/_rangeSlider.scss';
+import style3 from '../styles/_radiobutton.scss';
+
 
 
 class LayoutPage extends Component {
@@ -55,24 +60,6 @@ class LayoutPage extends Component {
 
         const btnTypes = ['default', 'danger', 'primary', 'success'];
         const btnSizes = ['xs', 'sm', 'md', 'lg'];
-
-        const checkboxItems = [
-            {
-                id: 1,
-                name: "age",
-                label: " Age"
-            },
-            {
-                id: 2,
-                name: "name",
-                label: " Name"
-            },
-            {
-                id: 3,
-                name: "place",
-                label: " Place"
-            },
-        ];
 
 
         const radioButtonOptns = [
@@ -158,29 +145,97 @@ class LayoutPage extends Component {
                     </Layout>
                 </Card>
 
+                {/* <Layout>
+                    <Card>
+                        <Pagination></Pagination>
+                    </Card>
+                </Layout> */}
+
+
+                <Layout>
+
+
+                    <Card>
+                        <RadioButton defaultOption={radioButtonOptns[2].value} radioButtonOptns={radioButtonOptns} />
+                    </Card>
+
+                </Layout>
+
                 <Layout>
                     <Card>
-                        <Pagination ></Pagination>
+                        <h1>Default RangeSlider</h1>
+                        <RangeSlider value={500} min={300} max={4000} />
+                        <h1>Colored RangeSlider</h1>
+                        <RangeSlider rangeSliderStyle={'rangeSliderGreen'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'rangeSliderRed'} value={500} min={300} max={4000} />
+                        <RangeSlider rangeSliderStyle={'rangeSliderBlue'} value={500} min={300} max={4000} />
                     </Card>
                 </Layout>
 
-
                 <Layout>
                     <Card>
-                        <Checkbox checkboxItems={checkboxItems} />
+                        <h1>Default Check Box</h1>
+                        <Checkbox containerCheckBoxStyle={'default'}
+                            labelCheckBoxStyle={'default'}
+                            spanStyle={'default'}
+                            value="Checked"
+                            selected={true}
+                            disabled={false} />
+                        <Checkbox value="Unchecked" selected={false} disabled={true} />
+                        <Checkbox value="Disabled" selected={true} disabled={true} />
+
+                        <h1>Container Check Box</h1>
+
+                        <Checkbox containerCheckBoxStyle={'containerCheckBox'}
+                            labelCheckBoxStyle={'labelCheckBoxStyle'}
+                            spanStyle={'checkmark'}
+                            value="Option 1"
+                            selected={false}
+                            disabled={false} />
+
+                        <Checkbox containerCheckBoxStyle={'containerCheckBox'}
+                            labelCheckBoxStyle={'labelCheckBoxStyle'}
+                            spanStyle={'checkmark'}
+                            value="Option 2"
+                            selected={false}
+                            disabled={false} />
+
+                        <Checkbox containerCheckBoxStyle={'containerCheckBox'}
+                            labelCheckBoxStyle={'labelCheckBoxStyle'}
+                            spanStyle={'checkmark'}
+                            value="Option 3"
+                            selected={false}
+                            disabled={false} />
                     </Card>
+
                     <Card>
-                        <RadioButton radioButtonOptns={radioButtonOptns} />
+                        <h1>Check Box Slider</h1>
+
+                        <CheckBoxTwo checkBoxStyle={'checkboxOne'}
+                            checked={false}
+                            disabled={false}
+                            value="CheckBox Slider"
+                            id="1" />
+
+                        <CheckBoxTwo checkBoxStyle={'checkboxTwo'}
+                            checked={false}
+                            disabled={false}
+                            value="CheckBox Slider Big"
+                            id="2" />
+
+                        <CheckBoxTwo checkBoxStyle={'checkboxThree'}
+                            checked={false}
+                            disabled={false}
+                            value="CheckBox Slider On"
+                            id="3" />
+
+                        <CheckBoxTwo checkBoxStyle={'checkboxFour'}
+                            checked={false}
+                            disabled={false}
+                            value="CheckBox Small Check"
+                            id="4" />
                     </Card>
-
                 </Layout>
-
-                <Layout>
-                    <Card>
-                        <RangeSlider></RangeSlider>
-                    </Card>
-                </Layout>
-
             </React.Fragment>
         );
     }

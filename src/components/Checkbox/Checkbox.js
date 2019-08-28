@@ -1,42 +1,59 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 
 class Checkbox extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            checkboxItems: props.checkboxItems
+            selected: this.props.selected,
         };
     }
 
-    onClickCheckbox(event) {
-        const value = event.target.name;
-        console.log("CONSOLE", value)
+    onClickCheckbox() {
+        this.setState({
+            selected: (this.state.selected) ? false : true
+        }, function () {
+            console.log(this.props.value, " is ", this.state.selected)
+        })
     }
 
     render() {
-
-        let checkboxItems;
-
-        if (this.state.checkboxItems !== null) {
-            checkboxItems = this.state.checkboxItems.map(checkboxItems => (
-                <div>
-                    <input
-                        onClick={this.onClickCheckbox.bind(this)}
-                        type="checkbox"
-                        id={checkboxItems.id}
-                        name={checkboxItems.name} />
-                    <label>{checkboxItems.label}</label>
-                </div>
-            ));
-        }
-
+        const { value, disabled, containerCheckBoxStyle, labelCheckBoxStyle, spanStyle } = this.props;
         return (
-            <div>
-                {checkboxItems}
+            <div className={containerCheckBoxStyle}>
+                <label className={labelCheckBoxStyle}>
+                    <input onClick={this.onClickCheckbox.bind(this)}
+                        type="checkbox"
+                        checked={this.state.selected}
+                        disabled={disabled}>
+                    </input>
+                    <span class={spanStyle}></span>
+                    {value}</label>
             </div>
         );
     }
 }
+
+
+Checkbox.propTypes = {
+    value: PropTypes.string,
+    selected: PropTypes.bool,
+    disabled: PropTypes.bool,
+    containerCheckBoxStyle: PropTypes.string,
+    labelCheckBoxStyle: PropTypes.string,
+    spanStyle: PropTypes.string
+
+};
+
+Checkbox.defaultProps = {
+    value: 'Checkbox1',
+    selected: true,
+    disabled: false,
+    // containerCheckBoxStyle: 'default',
+    // labelCheckBoxStyle: 'default',
+    // spanStyle: 'default'
+};
 
 export default Checkbox;

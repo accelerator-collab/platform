@@ -19,34 +19,28 @@ class RangeSlider extends Component {
         })
     }
     render() {
-        const { min, max } = this.props;
+        const { min, max, rangeSliderStyle } = this.props;
 
         return (
             <div class="slidecontainer">
-
-                <p>Default range slider:</p>
-                <span>
-                    <input type="range" min={min} max={max} value={this.state.value} onChange={this.onChangeSliderValue.bind(this)} />
-                    <p>{this.state.value}</p>
-                </span>
-
+                <input className={rangeSliderStyle} type="range" min={min} max={max} value={this.state.value} onChange={this.onChangeSliderValue.bind(this)} />
+                <p>{this.state.value}</p>
             </div>
-
-
         );
     }
 }
 
-
 RangeSlider.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
+    rangeSliderStyle: PropTypes.string
 
 };
 
 RangeSlider.defaultProps = {
     min: 0,
     max: 100,
+    rangeSliderStyle: 'default'
 };
 
 export default RangeSlider;
