@@ -1,6 +1,6 @@
 .featurette {
     align-items: center;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+    // border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
     display: flex;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -10,7 +10,6 @@
     }
 
     @media (max-width: 768px) {
-        flex-direction: column;
         
         .featurette__content {
             order: 2;
@@ -19,7 +18,17 @@
         .featurette__image {
             order: 1;
         }
-	}
+    }
+    
+    @media (max-width: 414px) { 
+        display: grid;
+        margin-left: 21%;
+    }
+
+    @media (max-width: 375px) { 
+        display: grid;
+        margin-left: 25%;
+    }
 }
 
 .featurette--reverse {
@@ -35,8 +44,14 @@
 
 .featurette__content {
     padding: 0 15px;
+    color: #454851;
 }
 
 .featurette__image {
     margin-bottom: 15px;
+}
+
+.featurette__image img {
+    min-width: 200px;
+    min-height: 150px;
 }

@@ -14,6 +14,8 @@ body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
+
+	font-family: sans-serif, Helvetica, Arial;
 }
 
 img {
@@ -31,13 +33,21 @@ li {
 	display: flex;
 }
 
-.wrapper__content {
-    margin-left: 80px;
+@media (min-width: 768px) {
+	.wrapper {
+		display: flex;
+		max-width: 1024px;
+		margin: auto;
+	}
 }
 
-.header {
-    margin-left: 80px;
-}
+// .wrapper__content {
+//     margin-left: 80px;
+// }
+
+// .header {
+//     margin-left: 80px;
+// }
 
 // Common
 @import 'common';
@@ -61,3 +71,15 @@ li {
 // ///////////////////
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+
+.accelerator-h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+	color: #00171F;
+	
+	@media (max-width: 414px) { 
+		margin-left: 20%;
+	}
+}

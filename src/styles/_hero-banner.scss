@@ -1,5 +1,6 @@
 .hero-banner {
-    background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1907&q=80');
+    // background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1907&q=80');
+    background-image: url('../assets/hero-banner-bg-image.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,5 +9,42 @@
     height: 350px;
 
     align-items: center;
-    padding: 1em;
+    padding: 1em 31%;
+
+    @media (max-width: 768px) {
+        padding: 1em 4%;
+    }
+
+    @media (max-width: 414px) { 
+        padding: 1em 23%;
+    }
+
+    @media (max-width: 375px) {
+        padding: 1em 25%;
+    }
+
+    @media (max-width: 360px) { 
+        padding: 1em 26%;
+    }
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+    }
+
+    @media (max-width: 375px) {
+        width: 102vw;
+    }
+
+    @media (max-width: 360px) {
+        width: 103vw;
+    }
 }

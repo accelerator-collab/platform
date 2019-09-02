@@ -14,4 +14,32 @@
     &--column {
         flex-direction: column;
     }
+
+    &--wrap-column {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+.layout--wrap-column > * {
+    width: 50%;
+}
+
+
+@media (max-width: 768px) { 
+    .layout {
+        padding: 1em 2em 2em 2em;
+    }
+    
+    .layout--wrap-column > * {
+        width: unset;
+    }
+}
+
+@media (max-width: 414px) { 
+    .layout {
+        padding: 1em;
+        display: block;
+    }
 }

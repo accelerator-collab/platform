@@ -1,27 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import CTA from '../CTA/CTA';
 
 class HeroBanner extends Component {
     render() {
-        const {children} = this.props;
-        const ctaLinks = [
-            {
-                ctaDesc: 'CTA Title 1',
-                ctaIcon: 'arrow-right',
-                ctaSize: 'lg',
-                tag: Link,
-            },
-            {
-                ctaDesc: 'CTA Title 2',
-                ctaIcon: 'car-side',
-                ctaSize: 'md',
-                tag: Link,
-            },
-        ];
+        const {children, customClass, ctaLinks} = this.props;
 
         return (
-            <section className="hero-banner">
+            <section className={`hero-banner full-width ${customClass}`}>
                 {children}
                 {ctaLinks && ctaLinks.length && ctaLinks.map((item, i) => 
                     <CTA 
