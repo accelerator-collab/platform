@@ -19,43 +19,55 @@ class HomePage extends Component {
     render() {
         const ctaLinks = [
             {
-                ctaDesc: 'Are you competitive? Ready for challenge?',
-                ctaIcon: 'meteor',
-                ctaSize: 'lg',
+                ctaDesc: 'Learn more',
+                ctaIcon: 'arrow-right',
+                ctaSize: 'xxs',
+                ctaColor: 'dark',
                 tag: Link,
             },
             {
                 ctaDesc: 'Get to know Jio and Arianne',
-                ctaIcon: 'lightbulb',
-                ctaSize: 'lg',
+                ctaIcon: 'arrow-right',
+                ctaSize: 'xxs',
+                ctaColor: '',
                 tag: Link,
+                ctaBorderless: true,
             },
         ];
 
         return (
             <main className="home-page">
-                <HeroBanner ctaLinks={ctaLinks} />
+                <HeroBanner title={'Are you competitive? Ready for challenge?'} ctaLinks={ctaLinks} />
+                
+                <h1 className="accelerator-h1">Spotlight</h1>
+                
                 <Layout className="layout--space-around">
                     <CTA 
                         ctaSize="full"
+                        ctaTitle="Find out which Game of Thrones house"
                         ctaImage={spot01}
                         ctaDesc="Find out which Game of Thrones house these two would like to be a part of, if they want to be on the top or the bottom bunk and other fun facts." 
+                        ctaColor={'grey-white'}
                         tag={'p'} />
                     <CTA 
                         ctaSize="full"
+                        ctaTitle="Find out which Game of Thrones house"
                         ctaImage={spot01}
+                        ctaColor={'grey-white'}
                         ctaDesc="Find out which Game of Thrones house these two would like to be a part of, if they want to be on the top or the bottom bunk and other fun facts" 
                         tag={'p'} />
                     <CTA 
                         ctaSize="full"
+                        ctaTitle="Find out which Game of Thrones house"
                         ctaImage={spot01}
+                        ctaColor={'grey-white'}
                         ctaDesc="Find out which Game of Thrones house these two would like to be a part of, if they want to be on the top or the bottom bunk and other fun facts"
                         tag={'p'} />
                 </Layout>
 
                 <h1 className="accelerator-h1">Center News</h1>
                 
-                <Layout className="layout--wrap-column">
+                <Layout className="layout--column">
                     
                     <Featurette 
                         reverse={true}

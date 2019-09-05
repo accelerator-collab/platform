@@ -44,11 +44,17 @@
 
 .featurette__content {
     padding: 0 15px;
-    color: #454851;
+    text-align: left;
+    font-size: 18px;
+    font-family: Helvetica;
+    letter-spacing: 0;
+    color: #777777;
+    opacity: 1;
 }
 
 .featurette__image {
     margin-bottom: 15px;
+    width: 400px;
 }
 
 .featurette__image img {

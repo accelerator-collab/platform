@@ -8,7 +8,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
 
-import logo from './assets/deloitte-logo.png';
+import logo from './assets/deloitte-logo.svg';
 
 const LINKS = [
   {

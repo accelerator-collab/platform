@@ -3,10 +3,11 @@ import CTA from '../CTA/CTA';
 
 class HeroBanner extends Component {
     render() {
-        const {children, customClass, ctaLinks} = this.props;
+        const {title, children, customClass, ctaLinks} = this.props;
 
         return (
             <section className={`hero-banner full-width ${customClass}`}>
+                <h1 className='hero-banner-title'>{title}</h1>
                 {children}
                 {ctaLinks && ctaLinks.length && ctaLinks.map((item, i) => 
                     <CTA 
@@ -14,6 +15,8 @@ class HeroBanner extends Component {
                         ctaSize={item.ctaSize} 
                         ctaDesc={item.ctaDesc} 
                         ctaIcon={item.ctaIcon} 
+                        ctaBorderless={item.ctaBorderless}
+                        ctaColor={item.ctaColor}
                         tag={item.tag} />
                 )}
             </section>

@@ -16,6 +16,9 @@ body {
 	margin: 0;
 
 	font-family: sans-serif, Helvetica, Arial;
+
+	background: #F4F4F4 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
 
 img {
@@ -73,11 +76,13 @@ li {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
 
 .accelerator-h1 {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 2em;
+	font-size: 40px;
+	font-weight: bold;
 	color: #00171F;
+	margin-left: 2%;
 	
 	@media (max-width: 414px) { 
 		margin-left: 20%;

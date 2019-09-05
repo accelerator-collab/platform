@@ -1,15 +1,19 @@
 .hero-banner {
-    // background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1907&q=80');
-    background-image: url('../assets/hero-banner-bg-image.png');
+    // background-image: url('../assets/hero-banner-bg-image.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    height: 350px;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+
+    display: grid;
+    height: 471px;
 
     align-items: center;
     padding: 1em 31%;
+
+    margin-bottom: 110px;
 
     @media (max-width: 768px) {
         padding: 1em 4%;
@@ -47,4 +51,16 @@
     @media (max-width: 360px) {
         width: 103vw;
     }
+}
+
+.hero-banner-title {
+    top: 209px;
+    left: 299px;
+    width: 668px;
+    height: 118px;
+    text-align: left;
+    font: Bold 48px Helvetica;
+    letter-spacing: 0;
+    color: #01161F;
+    opacity: 1;
 }
