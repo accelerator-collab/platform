@@ -30,22 +30,23 @@ class RadioButton extends Component {
     }
 
     render() {
+        const { radioButtonStyle, radioButtonStyleLabel } = this.props;
 
         let radioButtonOptns;
 
 
         if (this.state.radioButtonOptns !== null) {
             radioButtonOptns = this.state.radioButtonOptns.map(radioButtonOptns => (
-                <div className="radio">
+                <div>
                     <input
-                        className="radio-custom"
+                        className={radioButtonStyle}
                         type="radio"
                         name={radioButtonOptns.name}
                         value={radioButtonOptns.value}
                         checked={this.state.selectedOption === radioButtonOptns.value}
                     // onChange={this.handleOptionChange.bind(this)}
                     />
-                    <label className="radio-custom-label" onClick={() => this.handleOnClickLabel(radioButtonOptns.value)}>{radioButtonOptns.label}</label>
+                    <label className={radioButtonStyleLabel} onClick={() => this.handleOnClickLabel(radioButtonOptns.value)}>{radioButtonOptns.label}</label>
                 </div>
             ));
         }

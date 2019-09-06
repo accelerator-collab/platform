@@ -156,7 +156,8 @@ class LayoutPage extends Component {
 
 
                     <Card>
-                        <RadioButton defaultOption={radioButtonOptns[0].value} radioButtonOptns={radioButtonOptns} />
+                        <RadioButton radioButtonStyle={'radio-custom'} radioButtonStyleLabel={'radio-custom-label'} defaultOption={radioButtonOptns[0].value} radioButtonOptns={radioButtonOptns} />
+
                     </Card>
 
                 </Layout>
