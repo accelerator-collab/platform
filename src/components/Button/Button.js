@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {ThemeContext} from '../../context/ThemeContext';
 
 class Button extends Component {
 	render() {
-		const { type, text, size, disabled } = this.props;
-
+		const { type, text, size, disabled, theme } = this.props;
 		return (
-			<button className={`btn btn--${type} btn--${size}`} disabled={disabled}>
-				{text}
-			</button>
+			<ThemeContext.Consumer>
+				{theme => (
+					<button 
+						className={`btn btn--${type} btn--${size}`} 
+						disabled={disabled}
+					>
+						{text}
+					</button>
+				)}
+			</ThemeContext.Consumer>
 		);
 	}
 }

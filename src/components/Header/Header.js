@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -13,11 +13,12 @@ class Header extends Component {
             <ul className="header__links">
               {links.length && (links.map(d => 
                 <li key={d.label} className='header__link'>
-                  <Link 
+                  <a className="link__item"  href={d.url}>{d.label}</a>
+                  {/* <Link 
                     className="link__item" 
                     to={d.url}>
                     {d.label}
-                  </Link>
+                  </Link> */}
                 </li>
               ))}
             </ul>

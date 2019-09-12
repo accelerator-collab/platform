@@ -8,40 +8,78 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
 
+import logo from './assets/deloitte-logo.svg';
+
 const LINKS = [
   {
-    label: 'Home',
+    label: 'Foreword',
     url: '/',
     subLabel: 'Sub label 1'
   },
   {
-    label: 'Layouts',
-    url: '/layouts',
+    label: 'Spotlight',
+    url: '/',
     subLabel: ''
   },
   {
-    label: 'Accessibility',
-    url: '/accessibility',
+    label: 'Center News',
+    url: '/',
+    subLabel: ''
+  },
+  {
+    label: 'Wall Arts',
+    url: '/',
+    subLabel: ''
+  },
+  {
+    label: 'What\'s Coming',
+    url: '/',
+    subLabel: ''
+  },
+  {
+    label: 'Funny Corner',
+    url: '/',
     subLabel: ''
   },
 ];
 
 const socials = [
   {icon: 'facebook-f', url: 'https://www.facebook.com/'},
-  {icon: 'instagram', url: 'https://www.instagram.com/?hl=en'},
-  {icon: 'linkedin', url: 'https://www.instagram.com/?hl=en'}
+  {icon: 'twitter', url: 'https://twitter.com/'},
+  {icon: 'linkedin', url: 'https://www.instagram.com/?hl=en'},
+  {icon: 'pinterest', url: 'https://www.instagram.com/?hl=en'}
 ];
 
 const sidebarLinks = [
   {
-    name: 'Home',
-    icon: 'home',
+    name: 'Foreword',
+    icon: 'scroll',
     url: '/',
   },
   {
-    name: 'Layouts',
-    icon: 'folder',
-    url: 'layouts',
+    name: 'Spotlight',
+    icon: 'lightbulb',
+    url: '/',
+  },
+  {
+    name: 'Center News',
+    icon: 'newspaper',
+    url: '/',
+  },
+  {
+    name: 'Wall Arts',
+    icon: 'palette',
+    url: '/',
+  },
+  {
+    name: 'What\'s Coming',
+    icon: 'meteor',
+    url: '/',
+  },
+  {
+    name: 'Funny Corner',
+    icon: 'theater-masks',
+    url: '/',
   },
 ];
 
@@ -49,9 +87,9 @@ function App() {
   return (
     <Router>
       <Header 
-        siteTitle='Logo and Title' 
+        siteTitle='DCPDC Newsletter' 
         links={LINKS} 
-        logo='https://via.placeholder.com/150x150' />
+        logo={logo} />
       <main className="wrapper">
         <Sidebar links={sidebarLinks} />
         <article className="wrapper__content">

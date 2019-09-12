@@ -5,11 +5,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
 
-        this.setDefaultState();
-    }
-
-    setDefaultState() {
-		this.state = {
+        this.state = {
 			isCompressed: false,
 		}
     }
@@ -27,7 +23,7 @@ class Sidebar extends Component {
                 {isCompressed && (<div className="overlay" onClick={this.toggleDrawer} />)}
                 <aside className={`sidebar ${isCompressed ? '' : 'sidebar--compressed'}`}>
                     <div
-                        className="sidebar__main" 
+                        className={`${isCompressed ? 'sidebar__main__open' : 'sidebar__main'}`}
                         onClick={this.toggleDrawer}
                     >
                         <span className={`sidebar__icon fas ${isCompressed ? 'fa-times' : 'fa-bars'}`} />

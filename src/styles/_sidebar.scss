@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
 .sidebar {
 	background-color: #f5f5f5; // 030615 hover state bg // BF914B hover state of icon
 	position: fixed;
@@ -12,14 +18,14 @@
  	&--compressed {
 		overflow: hidden;
 	 	width: 80px;
-	}
+    }
 }
 
 .sidebar__list-item {
 
     a {
         text-decoration: none;
-
+        color: #00171F;
         &:hover {
             text-decoration: underline;
         }
@@ -33,7 +39,7 @@
 }
 
 .sidebar__list-name {
-    margin-left: 15px;;
+    margin: 0 15px;
 }
 
 .sidebar__main {
@@ -41,8 +47,18 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
+    color: #279AF1;
+}
+
+.sidebar__main__open {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #DC143C;
 }
 
 .sidebar__icon {
     font-size: 24px;
+    width: 30px;
 }
