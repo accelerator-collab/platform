@@ -1,0 +1,50 @@
+.slider {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	height: 500px;
+	overflow: hidden;
+	white-space: nowrap;
+
+	&__wrapper {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.slide {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.arrow {
+	height: 50px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f9f9f9;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform ease-in .1s;
+	position: absolute;
+	top: 45%;
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 100%;
+
+	&--next {
+		right: 20px;
+	}
+	&--back {
+		left: 20px;
+	}
+}
+
+.fa-chevron-right:before,
+.fa-chevron-left:before {
+	color: #fff;
+	opacity: 1;
+}
