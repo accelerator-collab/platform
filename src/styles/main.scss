@@ -17,8 +17,8 @@ body {
 
 	font-family: sans-serif, Helvetica, Arial;
 
-	background: #F4F4F4 0% 0% no-repeat padding-box;
-    opacity: 1;
+	background: #f4f4f4 0% 0% no-repeat padding-box;
+	opacity: 1;
 }
 
 img {
@@ -68,6 +68,7 @@ li {
 @import 'graph';
 @import 'sidebar';
 @import 'button';
+@import 'breadcrumb';
 
 // ///////////////////
 // // Font Awesome //
@@ -76,15 +77,15 @@ li {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
 
 .accelerator-h1 {
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-size: 40px;
 	font-weight: bold;
-	color: #00171F;
+	color: #00171f;
 	margin-left: 2%;
-	
-	@media (max-width: 414px) { 
+
+	@media (max-width: 414px) {
 		margin-left: 20%;
 	}
 }
