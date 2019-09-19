@@ -17,7 +17,7 @@ body {
 
 	font-family: sans-serif, Helvetica, Arial;
 
-	background: #F4F4F4 0% 0% no-repeat padding-box;
+	background: #fff 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
@@ -31,26 +31,6 @@ li {
 	margin: 0;
 	list-style: none;
 }
-
-.wrapper {
-	display: flex;
-}
-
-@media (min-width: 768px) {
-	.wrapper {
-		display: flex;
-		max-width: 1024px;
-		margin: auto;
-	}
-}
-
-// .wrapper__content {
-//     margin-left: 80px;
-// }
-
-// .header {
-//     margin-left: 80px;
-// }
 
 // Common
 @import 'common';
