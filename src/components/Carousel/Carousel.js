@@ -19,12 +19,20 @@ const RightArrow = (props) => {
 
 const Slide = ({ image }) => {
 	const styles = {
-		backgroundImage: `url(${image})`,
+		backgroundImage: `url(${image.img})`,
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
-		backgroundPosition: '50% 60%'
+		backgroundPosition: 'center'
 	};
-	return <div className="slide" style={styles} />;
+	return (
+		<div className="slide" style={styles}>
+			<div className={`slide__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
+				<div className="slide__title">{image.title}</div>
+				<div className="slide__subtitle">{image.subtitle}</div>
+				<div className="slide_button">{image.button}</div>
+			</div>
+		</div>
+	);
 };
 
 class Carousel extends Component {

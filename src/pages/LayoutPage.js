@@ -79,10 +79,22 @@ class LayoutPage extends Component {
 		];
 
 		const testImgs = [
-			'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
-			'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_338049497.jpg.jpg',
-			'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_416885032.jpg.jpg',
-			'https://brandspace.deloitte.com/downloads/5d7bde24d9c9a/lg_shutterstock_487144453.jpg.jpg'
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
+				title: 'Design Workspace',
+				subtitle: 'New Courses and activities to learn',
+				button: <button>More Details</button>,
+				theme: 'dark'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_338049497.jpg.jpg'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_416885032.jpg.jpg'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7bde24d9c9a/lg_shutterstock_487144453.jpg.jpg'
+			}
 		];
 
 		return (
