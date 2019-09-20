@@ -114,3 +114,42 @@
   .float-container input:focus ~ label{
     top: -12px;
   }
+
+
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 60%;
+    border-right: none;
+    padding: 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 100px;
+    height: 36px;
+    border: 1px solid#00BE7E;
+    background:#00BE7E;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size:  10px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    position: absolute;
+    font-family: Avenir;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Featurette extends Component {
     render() {
-        const {content, imageSrc, reverse } = this.props;
+        const { content, imageSrc, reverse } = this.props;
 
         return (
             <article className={`featurette ${reverse ? 'featurette--reverse' : ''}`}>
@@ -10,7 +10,7 @@ class Featurette extends Component {
                     {content}
                 </div>
                 <div className="featurette__image">
-                    <img src={imageSrc} alt="Featurette Thumbnail" /> 
+                    <img src={imageSrc} alt="Featurette Thumbnail" />
                 </div>
             </article>
         );

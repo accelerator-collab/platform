@@ -1,66 +1,108 @@
-.hero-banner {
-    // background-image: url('../assets/hero-banner-bg-image.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: #F9F9F9 0% 0% no-repeat padding-box;
-    opacity: 1;
+// .hero-banner {
+//     // background-image: url('../assets/hero-banner-bg-image.png');
+//     position: relative;
+//     // background-attachment: fixed;
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     background: transparent 0% 0% no-repeat padding-box;
+//     opacity: 1;
 
-    display: grid;
-    height: 471px;
+//     // display: grid;
+//     height: 482px;
 
-    align-items: center;
-    padding: 1em 31%;
+//     // align-items: center;
+//     // padding: 0 100%;
 
-    margin-bottom: 110px;
+//     margin-bottom: 110px;
 
-    @media (max-width: 768px) {
-        padding: 1em 4%;
-    }
+//     // @media (max-width: 768px) {
+//     //     padding: 1em 4%;
+//     // }
 
-    @media (max-width: 414px) { 
-        padding: 1em 23%;
-    }
+//     // @media (max-width: 414px) { 
+//     //     padding: 1em 23%;
+//     // }
 
-    @media (max-width: 375px) {
-        padding: 1em 25%;
-    }
+//     // @media (max-width: 375px) {
+//     //     padding: 1em 25%;
+//     // }
 
-    @media (max-width: 360px) { 
-        padding: 1em 26%;
-    }
-}
+//     // @media (max-width: 360px) { 
+//     //     padding: 1em 26%;
+//     // }
+// }
 
-.full-width {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+//  .full-width {
+//     width: 100vw;
+//     position: relative;
+//     left: 50%;
+//     right: 50%;
+//     margin-left: -50vw;
+//     margin-right: -50vw;
 
-    @media (max-width: 768px) {
-        width: 100vw;
-    }
+//     @media (max-width: 768px) {
+//         width: 100vw;
+//     }
 
-    @media (max-width: 375px) {
-        width: 102vw;
-    }
+//     @media (max-width: 375px) {
+//         width: 102vw;
+//     }
 
-    @media (max-width: 360px) {
-        width: 103vw;
-    }
-}
+//     @media (max-width: 360px) {
+//         width: 103vw;
+//     }
+//  }
 
 .hero-banner-title {
-    top: 209px;
-    left: 299px;
-    width: 668px;
-    height: 118px;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    width: 608px;
+    height: 76px;
     text-align: left;
-    font: Bold 48px Helvetica;
+    font-family: Avenir;
+    font-weight: bold;
+    font-size: 56px;
     letter-spacing: 0;
-    color: #01161F;
+    color: #FFFFFF;
     opacity: 1;
+    padding: 20px 0;
 }
+
+.hero-banner-desc {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    width: 639px;
+    height: 78px;
+    text-align: left;
+    font-family: Avenir;
+    font-size: 24px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.57;
+}
+
+.hero-banner-logo{
+    position: relative;
+    height: 482px;
+    opacity: 1;
+    left: 0%;
+}
+
+// @media only screen and (min-width: 768px) {
+//     /* For desktop: */
+//     .col-1 {width: 8.33%;}
+//     .col-2 {width: 16.66%;}
+//     .col-3 {width: 25%;}
+//     .col-4 {width: 33.33%;}
+//     .col-5 {width: 41.66%;}
+//     .col-6 {width: 50%;}
+//     .col-7 {width: 58.33%;}
+//     .col-8 {width: 66.66%;}
+//     .col-9 {width: 75%;}
+//     .col-10 {width: 83.33%;}
+//     .col-11 {width: 91.66%;}
+//     .col-12 {width: 100%;}
+//   }

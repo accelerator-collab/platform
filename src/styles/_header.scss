@@ -6,6 +6,7 @@ img {
         padding: 0;
         margin: 0;
         list-style: none;
+        white-space: nowrap;
     }
     
     .header {
@@ -63,7 +64,11 @@ img {
     }
     
     .link__item {
-        color: #fff;
+        font-family: "Avenir";
+        letter-spacing: 1.62px;
+        color: #F4F4F4;
+        opacity: 1;
+
         flex: 1;
         text-decoration: none;
         text-transform: capitalize;
@@ -71,7 +76,6 @@ img {
         text-align: left;
         font-weight: 100;
         font-size: 18px;
-        letter-spacing: 0;
     }
     
     .link__item:hover {
@@ -82,6 +86,10 @@ img {
     }
     
     .header__logo-icon {
-        height: 30px;
-        margin-left: 20px;
+        height: 36px;
+        width: 44px;
+        margin-left: 68px;
     }
+
+
+    

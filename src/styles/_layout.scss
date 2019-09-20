@@ -19,7 +19,11 @@
         display: flex;
         flex-wrap: wrap;
     }
-
+    &--hero-banner {
+        width: 1294px;
+        padding-top: 207px;
+        margin: auto;
+    }
 }
 
 .layout--wrap-column > * {

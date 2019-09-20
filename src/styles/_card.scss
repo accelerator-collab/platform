@@ -1,9 +1,38 @@
-.card {
-    background-color: $card-background-color;
-	box-shadow: 5px 5px 5px 0px rgba(20, 23, 40, 0.6);
-	margin: 10px;
-	padding: 10px;
-	position: relative;
-    border-radius: 3px;
-    width: 100%;
+// .card {
+//     background-color: $card-background-color;
+// 	box-shadow: 5px 5px 5px 0px rgba(20, 23, 40, 0.6);
+// 	margin: 10px;
+// 	padding: 10px;
+// 	position: relative;
+//     border-radius: 3px;
+//     width: 100%;
+// }
+
+.card{
+   
+    left: 309px;
+    width: 1294px;
+    height: 482px;
+ 
+  
+}
+
+.welcomePage__logo{
+  position: absolute;
+  width: 100%;
+  max-width: 436px;
+  height: 482px;
+}
+
+
+.welcomePage__titleDesc{
+  left: 654px;
+  position: relative;
+  color: white;
+}
+
+.welcomePage__desc{
+  position: relative;
+  left: 654px;
+  color: white;
 }

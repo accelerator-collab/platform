@@ -7,16 +7,26 @@ a.cta {
 
 .cta {
     align-items: center;
-    border-radius: 3px;
+    // border-radius: 3px;
     color: $color-white;
     display: flex;
     justify-content: space-between;
-    margin-right: 15px;
     min-height: 64px;
     width: 150px;
-    padding: 15px;
+    padding: 30px;
+
     text-decoration: none;
     text-transform: capitalize;
+
+
+    &--xxxs {
+        top: 530px;
+        left: 50%;
+        width: 199px;
+        height: 59px;
+   
+    }
+
 
     &--xxs {
         top: 372px;
@@ -72,17 +82,18 @@ a.cta {
 }
 
 .cta__desc {
-    font-size: 14px;
-    margin: 10px 0;
-    letter-spacing: 0.3px;
-    text-align: left;
+    height: 18px;
+    letter-spacing: 0;
+    text-align: center;
     width: 100%;
+    font-family: Helvetica;
     // background: #FFFFFF;
     // height: 200px;
 }
 
 .cta__icon {
     animation: slide-right 1s infinite;
+  
 }
 
 @keyframes slide-right {
@@ -141,6 +152,15 @@ a.cta {
 .skyblue {
     background-color: #279AF1;
     opacity: 1;
+}
+
+.red {
+    background: #F02A3B 0% 0% no-repeat padding-box;
+    box-shadow: 0px 13px 26px #9545002F;
+    letter-spacing: 0;
+    color:#FFFFFF;
+    font-size: 18px;
+    position: absolute;
 }
 
 .cta__title {
