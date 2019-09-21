@@ -16,11 +16,11 @@ body {
 	margin: 0;
 
 	font-family: Avenir;
-
 	// added for DarkB theme
 	background: transparent radial-gradient(closest-side at 50% 50%, #01161F 0%, #000000 100%) no-repeat padding-box;
 	// background: #F4F4F4 0% 0% no-repeat padding-box;
     opacity: 1;
+
 }
 
 img {
@@ -70,6 +70,7 @@ li {
 @import 'graph';
 @import 'sidebar';
 @import 'button';
+@import 'breadcrumb';
 
 // ///////////////////
 // // Font Awesome //
@@ -78,15 +79,15 @@ li {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
 
 .accelerator-h1 {
-    text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-size: 40px;
 	font-weight: bold;
-	color: #00171F;
+	color: #00171f;
 	margin-left: 2%;
-	
-	@media (max-width: 414px) { 
+
+	@media (max-width: 414px) {
 		margin-left: 20%;
 	}
 }

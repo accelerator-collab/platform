@@ -1,0 +1,16 @@
+.breadcrumb {
+	display: flex;
+	background-color: $card-background-color;
+	width: 100%;
+
+	&__object,
+	&__divider {
+		padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+	}
+	&__link {
+		font-weight: bold;
+	}
+	&__divider:last-child {
+		display: none;
+	}
+}
