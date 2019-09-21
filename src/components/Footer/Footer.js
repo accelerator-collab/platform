@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import InputBox from '../components/Input/InputBox';
 
 class Footer extends Component {
   render() {

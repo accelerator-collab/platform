@@ -16,6 +16,7 @@ import twitter from './assets/twitter.svg';
 import instagram from './assets/instagram.svg';
 import linkedin from './assets/linkedin.svg';
 import Layout from './components/Layout/Layout';
+import InputBox from './components/Input/InputBox'
 
 const LINKS = [
   {
@@ -90,11 +91,20 @@ const COLUMN2 = [
   }
 ]
 
+const COLUMN3 = [
+  {
+    label: '',
+    url: '/',
+    subLabel: '',
+    columntitle: 'Subscribe to our news letter'
+  }
+]
+
 const socials = [
-  { icon: 'facebook', url: 'https://www.facebook.com/' },
-  { icon: 'twitter', url: 'https://twitter.com/' },
-  { icon: 'linkedin', url: 'https://www.instagram.com/?hl=en' },
-  { icon: 'instagram', url: 'https://www.instagram.com/?hl=en' }
+  { icon: "facebook", url: 'https://www.facebook.com/' },
+  { icon: "twitter", url: 'https://twitter.com/' },
+  { icon: "linkedin", url: 'https://www.instagram.com/?hl=en' },
+  { icon: "instagram", url: 'https://www.instagram.com/?hl=en' }
 ];
 
 const sidebarLinks = [
@@ -149,7 +159,9 @@ function App() {
       </main>
 
 
-      <FooterDarkB socialMediaLink={socials} footerLinkColumn1={COLUMN1} footerLinkColumn2={COLUMN2} />
+      <FooterDarkB socialMediaLink={socials} footerLinkColumn1={COLUMN1} footerLinkColumn2={COLUMN2} footerLinkColumn3={COLUMN3} />
+
+
     </Router>
   );
 }

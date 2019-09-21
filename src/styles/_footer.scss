@@ -24,13 +24,14 @@
 .footer__container {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    // padding: 30px;
     margin: 30px;
 }
 
 .footer__container__social__section {
     display: inline-flex;
-    margin-top: 200px;
+      margin-top: 1%;
+      margin-left: 47%;
     // margin-right: 535px
 }
 
@@ -54,6 +55,12 @@
 }
 
 .footer__container__column2__link{
+  display: block;
+  margin-right: 970px;
+
+}
+
+.footer__container__column3__link{
   display: block;
   margin-right: 970px;
 

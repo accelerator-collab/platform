@@ -125,8 +125,12 @@
   .searchTerm {
     width: 60%;
     border-right: none;
-    padding: 5px;
+    /* padding: 7px; */
+    padding-left: 20px;
     outline: none;
+    font-size: 14px;
+    font-family: Avenir;
+    letter-spacing: 1.26px;
     color: #9DBFAF;
   }
   
@@ -135,21 +139,20 @@
   }
   
   .searchButton {
-    width: 100px;
-    height: 36px;
-    border: 1px solid#00BE7E;
-    background:#00BE7E;
+    width: 126px;
+    height: 42px;
+    border: 1px solid #00BE7E;
+    background: #00BE7E;
     text-align: center;
     color: #fff;
     cursor: pointer;
-    font-size:  10px;
+    font-size: 14px;
+    font-family: Avenir;
+    letter-spacing: 1.26px;
   }
   
   /*Resize the wrap to see the search bar change!*/
   .wrap{
-    position: absolute;
+    position: relative;
     font-family: Avenir;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
   }

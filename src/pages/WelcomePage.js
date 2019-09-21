@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import HeroBanner from '../components/HeroBanner/HeroBanner';
+import HeroBannerDarkB from '../components/HeroBanner/HeroBannerDarkB';
 import Layout from '../components/Layout/Layout';
 import CTA from '../components/CTA/CTA';
 import Featurette from '../components/Featurette/Featurette';
@@ -33,7 +33,7 @@ class WelcomePage extends Component {
         return (
             <main>
                 <Layout className="layout--hero-banner">
-                    <HeroBanner
+                    <HeroBannerDarkB
                         customClass={1}
                         logo={welcomePage1}
                         title={'Welcome to news feed'}
