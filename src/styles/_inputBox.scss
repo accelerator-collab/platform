@@ -1,116 +1,158 @@
 
 .form-control{
-    height: 30px;
-    width: 200px;
+  height: 30px;
+  width: 200px;
 }
 
 .iconBox{
-  position: absolute;
-  top: 7px;
-  right: 8px;
+position: absolute;
+top: 7px;
+right: 8px;
 }  
 
 .searchInputContainer{
-  position: relative;
+position: relative;
 
 }
 
 
-  .float-container.active label {
-    transform: translate(0, 4px) scale(.75);
-  }
+.float-container.active label {
+  transform: translate(0, 4px) scale(.75);
+}
 
-  .inputWithIcon input[type="text"] {
-    width: 100%;
-    border: 2px solid #aaa;
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 8px;
-    box-sizing: border-box;
-    transition: 0.3s;
-  }
+.inputWithIcon input[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
 
-  .inputWithIcon input[type="text"]:focus {
-    border-color: dodgerBlue;
-    box-shadow: 0 0 8px 0 dodgerBlue;
-  }
+.inputWithIcon input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
 
-  .inputWithIcon input[type="text"] {
-    padding-left: 40px;
-  }
-  
-  .inputWithIcon {
-    position: relative;
-    width: 200px;
-  }
+.inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
 
-  .inputWithIcon i {
-    position: absolute;
-    left: 0;
-    top: 8px;
-    padding: 9px 8px;
-    color: #aaa;
-    transition: 0.3s;
-  }
-  
-  .inputWithIcon input[type="text"]:focus + i {
-    color: dodgerBlue;
-  }
-  
-  .inputWithIcon.inputIconBg i {
-    background-color: #aaa;
-    color: #fff;
-    padding: 9px 4px;
-    border-radius: 4px 0 0 4px;
-  }
-  
-  .inputWithIcon.inputIconBg input[type="text"]:focus + i {
-    color: #fff;
-    background-color: dodgerBlue;
-  }
-  
+.inputWithIcon {
+  position: relative;
+  width: 200px;
+}
 
-  
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
 
-  .float-container {
-    border: solid 1px #ccc;
-    padding: 0 2px;
-    position: relative;
-    width: 200px;
-  }
+.inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}
 
-  .float-container input{
-    border: none;
-    font-size: 12px;
-    margin: 8px 0;
-    outline: 0;
-    width: 200px;
-    transition: all 0.2s;
-   touch-action: manipulation;
-  }
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
 
-  .float-container label {
-    position: absolute;
+.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
 
-    font-size: 12px;
-    pointer-events: none;
 
-    display: inline-block;
-    left: 15px;
-    top: 16px;
-    transition: all 150ms ease-in;
-    color: #676767;
 
-  }
 
-  .float-container label.field-active {
-    transform: translateY(-25px);
-    font-size: .9em;
-    color: #000;
-    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff;
-   }
+.float-container {
+  border: solid 1px #ccc;
+  padding: 0 2px;
+  position: relative;
+  width: 200px;
+}
 
-  .float-container input:focus ~ label{
-    top: -12px;
-  }
+.float-container input{
+  border: none;
+  font-size: 12px;
+  margin: 8px 0;
+  outline: 0;
+  width: 200px;
+  transition: all 0.2s;
+ touch-action: manipulation;
+}
+
+.float-container label {
+  position: absolute;
+
+  font-size: 12px;
+  pointer-events: none;
+
+  display: inline-block;
+  left: 15px;
+  top: 16px;
+  transition: all 150ms ease-in;
+  color: #676767;
+
+}
+
+.float-container label.field-active {
+  transform: translateY(-25px);
+  font-size: .9em;
+  color: #000;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff;
+ }
+
+.float-container input:focus ~ label{
+  top: -12px;
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 60%;
+  border-right: none;
+  /* padding: 7px; */
+  padding-left: 20px;
+  outline: none;
+  font-size: 14px;
+  font-family: Avenir;
+  letter-spacing: 1.26px;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 126px;
+  height: 42px;
+  border: 1px solid #00BE7E;
+  background: #00BE7E;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Avenir;
+  letter-spacing: 1.26px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  position: relative;
+  font-family: Avenir;
+}

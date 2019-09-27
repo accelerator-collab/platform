@@ -8,7 +8,7 @@ a.cta {
 .cta {
     align-items: center;
     border-radius: 3px;
-    color: $color-white;
+    color: white;
     display: flex;
     justify-content: space-between;
     margin-right: 15px;
@@ -17,17 +17,6 @@ a.cta {
     padding: 15px;
     text-decoration: none;
     text-transform: capitalize;
-
-    &--xxs {
-        top: 372px;
-        left: 298px;
-        width: 223px;
-        height: 64px;
-    }
-
-    &--xs {
-        width: 100px;
-    }
 
     &--sm {
         width: 150px;
@@ -64,6 +53,35 @@ a.cta {
 
     &:last-child {
         margin-right: 0px;
+    }
+
+    &--borderless {
+        text-align: left;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 0;
+        color: #000;
+        opacity: 1;
+        background: none;
+    }
+
+    &--red {
+        background: #F02A3B 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--dark {
+        background: #01161F 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--green {
+        background: #00BE7E 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--round {
+        border-radius: 30px;
     }
 }
 
@@ -102,17 +120,6 @@ a.cta {
     height: 200px;
 }
 
-.cta-borderless {
-    text-align: left;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 0;
-    color: #000000;
-    opacity: 1;
-    background: none;
-    width: 27%;
-}
-
 .cta__img__holder {
     height: 233px;
     width: 317px;
@@ -123,11 +130,6 @@ a.cta {
     opacity: 0.9;
     padding-left: 20%;
     padding-top: 5%;
-}
-
-.dark {
-    background: #01161F 0% 0% no-repeat padding-box;
-    opacity: 1;
 }
 
 .grey-white {

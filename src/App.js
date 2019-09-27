@@ -9,12 +9,13 @@ import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
 
 import logo from './assets/deloitte-logo.svg';
-
+import DarkThemePage from './pages/DarkThemePage';
 const LINKS = [
   {
     label: 'Foreword',
     url: '/',
-    subLabel: 'Sub label 1'
+    subLabel: 'Sub label 1',
+    columntitle: 'Column Title'
   },
   {
     label: 'Spotlight',
@@ -43,11 +44,59 @@ const LINKS = [
   },
 ];
 
+
+const COLUMN1 = [
+  {
+    label: 'Wall Arts',
+    url: '/',
+    subLabel: 'Sub label 1',
+    columntitle: 'Column Title'
+  },
+  {
+    label: 'What’s Coming',
+    url: '/',
+    subLabel: ''
+  },
+  {
+    label: 'Funny Corner',
+    url: '/',
+    subLabel: ''
+  }
+]
+
+const COLUMN2 = [
+  {
+    label: 'Foreword',
+    url: '/',
+    subLabel: '',
+    columntitle: 'Column Title'
+  },
+  {
+    label: 'Spotlight',
+    url: '/',
+    subLabel: ''
+  },
+  {
+    label: 'Center News',
+    url: '/',
+    subLabel: ''
+  }
+]
+
+const COLUMN3 = [
+  {
+    label: '',
+    url: '/',
+    subLabel: '',
+    columntitle: 'Subscribe to our news letter'
+  }
+]
+
 const socials = [
-  {icon: 'facebook-f', url: 'https://www.facebook.com/'},
-  {icon: 'twitter', url: 'https://twitter.com/'},
-  {icon: 'linkedin', url: 'https://www.instagram.com/?hl=en'},
-  {icon: 'pinterest', url: 'https://www.instagram.com/?hl=en'}
+  { icon: "facebook", url: 'https://www.facebook.com/' },
+  { icon: "twitter", url: 'https://twitter.com/' },
+  { icon: "linkedin", url: 'https://www.instagram.com/?hl=en' },
+  { icon: "instagram", url: 'https://www.instagram.com/?hl=en' }
 ];
 
 const sidebarLinks = [
@@ -86,18 +135,19 @@ const sidebarLinks = [
 function App() {
   return (
     <Router>
-      <Header 
-        siteTitle='DCPDC Newsletter' 
-        links={LINKS} 
+      <Header
+        siteTitle='DCPDC Newsletter'
+        links={LINKS}
         logo={logo} />
-      <main className="wrapper">
+      <main>
         <Sidebar links={sidebarLinks} />
-        <article className="wrapper__content">
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/layouts" component={LayoutPage} />
+        <article>
+          {/* <Route exact path="/" component={HomePage} />
+          <Route exact path="/layouts" component={LayoutPage} /> */}
+          <Route exact path="/" component={DarkThemePage} />
         </article>
       </main>
-      <Footer socialMediaLink={socials} footerLink={LINKS} />
+      <Footer socialMediaLink={socials} footerLinkColumn1={COLUMN1} footerLinkColumn2={COLUMN2} footerLinkColumn3={COLUMN3} />
     </Router>
   );
 }
