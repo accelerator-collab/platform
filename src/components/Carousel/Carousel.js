@@ -18,6 +18,7 @@ const RightArrow = (props) => {
 };
 
 const Slide = ({ image }) => {
+	console.log(image, "images")
 	const styles = {
 		backgroundImage: `url(${image.img})`,
 		backgroundSize: 'cover',

@@ -1,8 +1,10 @@
 .slider {
 	position: relative;
 	width: 100%;
-	margin: 0 auto;
-	height: 500px;
+	// margin: 0 auto;
+	margin-top: 101px;
+	margin-left: 112px;
+	height: 676px;
 	overflow: hidden;
 	white-space: nowrap;
 
@@ -33,14 +35,23 @@
 
 	&__title {
 		text-align: center;
-		font-size: 3rem;
+		font-size: 90px;
 		z-index: 100;
 		margin-bottom: 1rem;
+		letter-spacing: 0;
 		font-weight: bold;
+		font-family: monospace;
+		color: #FFFFFF;
+		opacity: 0.9;
 	}
 
 	&__subtitle {
 		margin-bottom: 3rem;
+		color: #E5E7E8;
+		font-family: monospace;
+		opacity: 0.81;
+		font-size: 24px;
+
 	}
 
 	&--dark {
