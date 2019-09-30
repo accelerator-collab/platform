@@ -1,0 +1,41 @@
+$spacers: (
+	o: 0,
+	xxxs: 5px,
+	xxs: 10px,
+	xs: 15px,
+	s: 20px,
+	m: 40px,
+	l: 60px,
+	xl: 80px,
+	xxl: 100px
+) !default;
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+	@each $size, $unit in $spacers {
+		.#{$abbrev}-#{$size} { #{$prop}: $unit !important; }
+
+		.#{$abbrev}-t-#{$size},
+		.#{$abbrev}-y-#{$size} {
+			#{$prop}-top: $unit !important;
+		}
+
+		.#{$abbrev}-r-#{$size},
+		.#{$abbrev}-x-#{$size} {
+			#{$prop}-right: $unit !important;
+		}
+
+		.#{$abbrev}-b-#{$size},
+		.#{$abbrev}-y-#{$size} {
+			#{$prop}-bottom: $unit !important;
+		}
+
+		.#{$abbrev}-l-#{$size},
+		.#{$abbrev}-x-#{$size} {
+			#{$prop}-left: $unit !important;
+		}
+	}
+}
+
+@mixin spacing($abbrev, $side, $size) {
+	@extend .#{$abbrev}-#{$side}-#{$size};
+}

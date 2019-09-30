@@ -12,7 +12,6 @@ class HeroBanner extends Component {
                         <img src={avatar} alt="Avatar" />
                     </div>
                 )}
-
                 <div className="hero-banner__copy">
                     <h1 className='hero-banner__title'>{title}</h1>
                     {desc && (<p className="hero-banner__desc">{desc}</p>)}

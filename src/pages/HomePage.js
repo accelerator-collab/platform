@@ -21,14 +21,15 @@ class HomePage extends Component {
             {
                 ctaDesc: 'Learn more',
                 ctaIcon: 'arrow-right',
-                ctaSize: 'xxs',
+                ctaSize: 'md',
                 ctaColor: 'dark',
                 tag: Link,
             },
             {
                 ctaDesc: 'Get to know Jio and Arianne',
                 ctaIcon: 'arrow-right',
-                ctaSize: 'xxs',
+                ctaSize: 'lg',
+                ctaStyle: 'cta--borderless',
                 ctaColor: '',
                 tag: Link,
                 ctaBorderless: true,

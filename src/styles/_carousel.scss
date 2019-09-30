@@ -1,12 +1,11 @@
 .slider {
 	position: relative;
 	width: 100%;
-	// margin: 0 auto;
-	margin-top: 101px;
-	margin-left: 112px;
+	margin: 0 auto;
 	height: 676px;
 	overflow: hidden;
 	white-space: nowrap;
+	text-align: center;
 
 	&__wrapper {
 		position: relative;

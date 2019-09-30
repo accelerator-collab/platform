@@ -18,7 +18,6 @@ const RightArrow = (props) => {
 };
 
 const Slide = ({ image }) => {
-	console.log(image, "images")
 	const styles = {
 		backgroundImage: `url(${image.img})`,
 		backgroundSize: 'cover',
@@ -74,8 +73,9 @@ class Carousel extends Component {
 	};
 
 	render() {
+		const { images, className } = this.props;
 		return (
-			<div className="slider">
+			<div className={`slider ${className}`}>
 				<div
 					className="slider__wrapper"
 					style={{
@@ -83,7 +83,7 @@ class Carousel extends Component {
 						transition: 'transform ease-out 0.45s'
 					}}
 				>
-					{this.props.images.map((image, i) => <Slide key={i} image={image} />)}
+					{images.map((image, i) => <Slide key={i} image={image} {...this.props} />)}
 				</div>
 
 				<LeftArrow goToPrevSlide={this.goToPrevSlide} />
@@ -95,11 +95,13 @@ class Carousel extends Component {
 }
 
 Carousel.propTypes = {
-	images: PropTypes.array.isRequired
+	images: PropTypes.array.isRequired,
+	className: PropTypes.string
 };
 
 Carousel.defaultProps = {
-	images: []
+	images: [],
+	className: '',
 };
 
 export default Carousel;

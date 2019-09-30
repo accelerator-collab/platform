@@ -9,7 +9,9 @@ import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
 
 import logo from './assets/deloitte-logo.svg';
-import DarkThemePage from './pages/DarkThemePage';
+import DarkBThemePage from './pages/DarkBThemePage';
+import DarkAThemePage from './pages/DarkAThemePage';
+
 const LINKS = [
   {
     label: 'Foreword',
@@ -144,7 +146,8 @@ function App() {
         <article>
           {/* <Route exact path="/" component={HomePage} />
           <Route exact path="/layouts" component={LayoutPage} /> */}
-          <Route exact path="/" component={DarkThemePage} />
+          <Route exact path="/DarkBThemePage" component={DarkBThemePage} />
+          <Route exact path="/DarkAThemePage" component={DarkAThemePage} />
         </article>
       </main>
       <Footer socialMediaLink={socials} footerLinkColumn1={COLUMN1} footerLinkColumn2={COLUMN2} footerLinkColumn3={COLUMN3} />
