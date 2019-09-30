@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomePage from './pages/HomePage';
 import HomepageBLight from './pages/HomepageBLight';
-import HomepageALight from './pages/HomepageALight';
+import HomepageALight from './pages/HomepageAlight';
 import LayoutPage from './pages/LayoutPage';
 
 import Header from './components/Header/Header';

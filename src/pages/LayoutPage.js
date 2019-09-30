@@ -15,6 +15,7 @@ import CheckBoxTwo from '../components/Checkbox/CheckBox2';
 import styles from '../styles/_checkbox.scss';
 import styles2 from '../styles/_rangeSlider.scss';
 import style3 from '../styles/_radiobutton.scss';
+import Carousel from '../components/Carousel/Carousel';
 
 class LayoutPage extends Component {
 	constructor(props) {
@@ -77,8 +78,30 @@ class LayoutPage extends Component {
 			}
 		];
 
+		const testImgs = [
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
+				title: 'Design Workspace',
+				subtitle: 'New Courses and activities to learn',
+				button: <button>More Details</button>,
+				theme: 'dark'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_338049497.jpg.jpg'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_416885032.jpg.jpg'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d7bde24d9c9a/lg_shutterstock_487144453.jpg.jpg'
+			}
+		];
+
 		return (
 			<React.Fragment>
+				<Layout>
+					<Carousel images={testImgs} />
+				</Layout>
 				<Layout>
 					{btnTypes.map((type) => {
 						return <Button type={type} text={type} size="sm" />;
