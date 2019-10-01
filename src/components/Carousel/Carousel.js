@@ -36,27 +36,12 @@ const Slide = ({ image }) => {
 };
 
 const Thumb = ({ image }) => {
-	const styles = {
-		width: '33.33%',
-		height: '100%',
-		display: 'inline-block'
-	};
-	const childStyle = {
-		backgroundImage: `url(${image.img})`,
-		backgroundSize: 'cover',
-		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'center',
-		width: '75%',
-		height: '50%',
-		textAlign: 'center',
-		verticalAlign: 'middle',
-		margin: '0 auto',
-		top: '25%',
-		position: 'relative'
+	const style = {
+		backgroundImage: `url(${image.img})`
 	};
 	return (
-		<div style={styles}>
-			<div style={childStyle} />
+		<div className="thumbnail">
+			<div className="thumbnail__image" style={style} />
 		</div>
 	);
 };
