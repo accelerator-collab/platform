@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const LeftArrow = (props) => {
 	return (
-		<div className={`arrow arrow--back`} onClick={props.goToPrevSlide}>
+		<div className="arrow arrow--back" onClick={props.goToPrevSlide}>
 			<i className="fas fa-chevron-left" aria-hidden="true" />
 		</div>
 	);
