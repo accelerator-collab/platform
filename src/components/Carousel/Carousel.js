@@ -39,9 +39,14 @@ const Thumb = ({ image }) => {
 	const style = {
 		backgroundImage: `url(${image.img})`
 	};
+	const overlayStyle = {
+		width: image.title ? '100%' : '0%',
+		height: image.title ? '100%' : '0%'
+	};
 	return (
 		<div className="thumbnail">
 			<div className="thumbnail__image" style={style}>
+				<div className="thumbnail__overlay" style={overlayStyle} />
 				<div className={`thumbnail__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
 					<div className="thumbnail__title">{image.title}</div>
 					<div className="thumbnail__subtitle">{image.subtitle}</div>

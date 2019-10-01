@@ -92,6 +92,13 @@
 		margin: 0 auto;
 		top: 25%;
 		position: relative;
+		border-radius: 5%;
+	}
+
+	&__overlay {
+		background-color: #aaa;
+		border-radius: inherit;
+		opacity: 0.8;
 	}
 
 	&__bodywrapper {
@@ -114,6 +121,7 @@
 		z-index: 100;
 		margin-bottom: 1rem;
 		font-weight: bold;
+		opacity: 1;
 	}
 
 	&__subtitle {
