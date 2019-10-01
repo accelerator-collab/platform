@@ -41,7 +41,13 @@ const Thumb = ({ image }) => {
 	};
 	return (
 		<div className="thumbnail">
-			<div className="thumbnail__image" style={style} />
+			<div className="thumbnail__image" style={style}>
+				<div className={`thumbnail__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
+					<div className="thumbnail__title">{image.title}</div>
+					<div className="thumbnail__subtitle">{image.subtitle}</div>
+					<div className="thumbnail_button">{image.button}</div>
+				</div>
+			</div>
 		</div>
 	);
 };
