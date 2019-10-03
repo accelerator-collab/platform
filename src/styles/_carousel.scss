@@ -37,20 +37,30 @@
 
 	&__link,
 	&__a {
-		text-decoration: underline;
-
-		&:hover {
-			cursor: pointer;
+		&:link {
+			color: #fff;
+		}
+		&:visited {
 			color: #ccc;
+		}
+		&:hover {
+			color: #aaa;
 		}
 	}
 
 	&__image {
+		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		width: 100%;
 		height: 100%;
+	}
+
+	&__overlay {
+		background-color: #444;
+		border-radius: inherit;
+		opacity: 0.7;
 	}
 
 	&__bodywrapper {
@@ -135,11 +145,14 @@
 
 	&__link,
 	&__a {
-		text-decoration: underline;
-
-		&:hover {
-			cursor: pointer;
+		&:link {
+			color: #fff;
+		}
+		&:visited {
 			color: #ccc;
+		}
+		&:hover {
+			color: #aaa;
 		}
 	}
 

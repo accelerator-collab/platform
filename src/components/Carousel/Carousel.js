@@ -35,7 +35,9 @@ const Slide = ({ image, thumbnails }) => {
 					<div className={`${type}__title`}>{image.title}</div>
 					<div className={`${type}__subtitle`}>{image.subtitle}</div>
 					<div className={`${type}__action`}>
-						<Tag className={`${type}__${image.action}`}>{image.action_label}</Tag>
+						<Tag className={`${type}__${image.action}`} {...image.action_props}>
+							{image.action_label}
+						</Tag>
 					</div>
 				</div>
 			</div>

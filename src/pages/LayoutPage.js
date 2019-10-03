@@ -85,7 +85,9 @@ class LayoutPage extends Component {
 				subtitle: 'New Courses and activities to learn',
 				action: 'button',
 				action_label: 'More Details',
-				action_route: '#',
+				action_props: {
+					onClick: () => window.alert('TEST')
+				},
 				theme: 'dark'
 			},
 			{
@@ -94,7 +96,9 @@ class LayoutPage extends Component {
 				subtitle: 'Testing this text with link',
 				action: 'a',
 				action_label: 'Click for details',
-				action_route: '#',
+				action_props: {
+					href: '#'
+				},
 				theme: 'dark'
 			},
 			{
