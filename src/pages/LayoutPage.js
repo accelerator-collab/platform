@@ -103,6 +103,9 @@ class LayoutPage extends Component {
 					<Carousel images={testImgs} />
 				</Layout>
 				<Layout>
+					<Carousel thumbnails images={testImgs} />
+				</Layout>
+				<Layout>
 					{btnTypes.map((type) => {
 						return <Button type={type} text={type} size="sm" />;
 					})}
