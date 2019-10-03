@@ -94,6 +94,9 @@ class LayoutPage extends Component {
 			},
 			{
 				img: 'https://brandspace.deloitte.com/downloads/5d7bde24d9c9a/lg_shutterstock_487144453.jpg.jpg'
+			},
+			{
+				img: 'https://brandspace.deloitte.com/downloads/5d782a39f09bd/lg_shutterstock_59642665.jpg.jpg'
 			}
 		];
 
