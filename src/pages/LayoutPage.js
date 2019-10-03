@@ -83,11 +83,19 @@ class LayoutPage extends Component {
 				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
 				title: 'Design Workspace',
 				subtitle: 'New Courses and activities to learn',
-				button: <button>More Details</button>,
+				action: 'button',
+				action_label: 'More Details',
+				action_route: '#',
 				theme: 'dark'
 			},
 			{
-				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_338049497.jpg.jpg'
+				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_338049497.jpg.jpg',
+				title: 'Test Text',
+				subtitle: 'Testing this text with link',
+				action: 'a',
+				action_label: 'Click for details',
+				action_route: '#',
+				theme: 'dark'
 			},
 			{
 				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_416885032.jpg.jpg'

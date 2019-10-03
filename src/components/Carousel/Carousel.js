@@ -26,14 +26,17 @@ const Slide = ({ image, thumbnails }) => {
 		width: image.title ? '100%' : '0%',
 		height: image.title ? '100%' : '0%'
 	};
+	const Tag = image.action ? image.action : 'div';
 	return (
-		<div className={`${type}`} style={!thumbnails ? styles : {}}>
-			<div className={`${type}__image`} style={thumbnails ? styles : {}}>
+		<div className={`${type}`}>
+			<div className={`${type}__image`} style={styles}>
 				<div className={`${type}__overlay`} style={overlayStyle} />
 				<div className={`${type}__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
 					<div className={`${type}__title`}>{image.title}</div>
 					<div className={`${type}__subtitle`}>{image.subtitle}</div>
-					<div className={`${type}_button`}>{image.button}</div>
+					<div className={`${type}__action`}>
+						<Tag className={`${type}__${image.action}`}>{image.action_label}</Tag>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -93,7 +96,7 @@ class Carousel extends Component {
 	};
 
 	render() {
-		const { images, thumbnails } = this.props;
+		const { images, thumbnails, action } = this.props;
 		return (
 			<div className="slider">
 				<div
