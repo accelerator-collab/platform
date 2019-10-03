@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const LeftArrow = (props) => {
 	return (
@@ -35,7 +36,10 @@ const Slide = ({ image, thumbnails }) => {
 					<div className={`${type}__title`}>{image.title}</div>
 					<div className={`${type}__subtitle`}>{image.subtitle}</div>
 					<div className={`${type}__action`}>
-						<Tag className={`${type}__${image.action}`} {...image.action_props}>
+						<Tag
+							className={`${type}__${image.action === Link ? 'link' : image.action}`}
+							{...image.action_props}
+						>
 							{image.action_label}
 						</Tag>
 					</div>
@@ -98,7 +102,7 @@ class Carousel extends Component {
 	};
 
 	render() {
-		const { images, thumbnails, action } = this.props;
+		const { images, thumbnails } = this.props;
 		return (
 			<div className="slider">
 				<div
