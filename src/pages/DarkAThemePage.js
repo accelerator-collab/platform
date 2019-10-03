@@ -7,10 +7,15 @@ import HeroBanner from '../components/HeroBanner/HeroBanner';
 import Layout from '../components/Layout/Layout';
 import Featurette from '../components/Featurette/Featurette';
 import CTA from '../components/CTA/CTA';
+import Carousel from '../components/Carousel/Carousel';
 
 // Assets
 import BannerA from '../assets/hero-banner-a-dark.png';
 import DetailImages from '../assets/bronze-circle.png';
+import welcomeBanner1 from '../assets/welcome-banner-01.png';
+import welcomeBanner2 from '../assets/welcome-banner-02.png';
+import welcomeBanner3 from '../assets/welcome-banner-03.png';
+
 
 class DarkAThemePage extends Component {
     render() {
@@ -23,6 +28,25 @@ class DarkAThemePage extends Component {
                 ctaStyle: 'cta--round',
                 tag: NavLink,
             },
+        ];
+
+        const testImgs = [
+            {
+                img: welcomeBanner1,
+                title: 'Design Workspace',
+                subtitle: 'New Courses and activities to learn',
+                button: <button>More Details</button>,
+                theme: 'dark'
+            },
+            {
+                img: welcomeBanner2
+            },
+            {
+                img: welcomeBanner3
+            },
+            {
+                img: welcomeBanner2
+            }
         ];
 
         return (
@@ -108,6 +132,12 @@ class DarkAThemePage extends Component {
                         ctaIcon={'arrow-right'}
                         ctaColor={'transparent-green-radius'}
                         tag={NavLink} />
+
+
+                </Layout>
+
+                <Layout className=''>
+                    <Carousel thumbnails images={testImgs} />
                 </Layout>
 
             </section>

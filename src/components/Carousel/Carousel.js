@@ -35,6 +35,28 @@ const Slide = ({ image }) => {
 	);
 };
 
+const Thumb = ({ image }) => {
+	const style = {
+		backgroundImage: `url(${image.img})`
+	};
+	const overlayStyle = {
+		width: image.title ? '100%' : '0%',
+		height: image.title ? '100%' : '0%'
+	};
+	return (
+		<div className="thumbnail">
+			<div className="thumbnail__image" style={style}>
+				<div className="thumbnail__overlay" style={overlayStyle} />
+				<div className={`thumbnail__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
+					<div className="thumbnail__title">{image.title}</div>
+					<div className="thumbnail__subtitle">{image.subtitle}</div>
+					<div className="thumbnail_button">{image.button}</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 class Carousel extends Component {
 	constructor(props) {
 		super(props);
@@ -48,10 +70,17 @@ class Carousel extends Component {
 	goToPrevSlide = () => {
 		if (this.state.currentIndex === 0) return;
 
-		this.setState((prevState) => ({
-			currentIndex: prevState.currentIndex - 1,
-			translateValue: prevState.translateValue + this.slideWidth()
-		}));
+		if (!this.props.thumbnails) {
+			this.setState((prevState) => ({
+				currentIndex: prevState.currentIndex - 1,
+				translateValue: prevState.translateValue + this.slideWidth()
+			}));
+		} else {
+			this.setState((prevState) => ({
+				currentIndex: prevState.currentIndex - 1,
+				translateValue: prevState.translateValue + this.slideWidth() / 3
+			}));
+		}
 	};
 
 	goToNextSlide = () => {
@@ -62,10 +91,17 @@ class Carousel extends Component {
 			});
 		}
 
-		this.setState((prevState) => ({
-			currentIndex: prevState.currentIndex + 1,
-			translateValue: prevState.translateValue + -this.slideWidth()
-		}));
+		if (!this.props.thumbnails) {
+			this.setState((prevState) => ({
+				currentIndex: prevState.currentIndex + 1,
+				translateValue: prevState.translateValue + -this.slideWidth()
+			}));
+		} else {
+			this.setState((prevState) => ({
+				currentIndex: prevState.currentIndex === 0 ? 3 : prevState.currentIndex + 1,
+				translateValue: prevState.translateValue + -(this.slideWidth() / 3)
+			}));
+		}
 	};
 
 	slideWidth = () => {
@@ -73,7 +109,7 @@ class Carousel extends Component {
 	};
 
 	render() {
-		const { images, className } = this.props;
+		const { images, thumbnails, className } = this.props;
 		return (
 			<div className={`slider ${className}`}>
 				<div
@@ -83,7 +119,15 @@ class Carousel extends Component {
 						transition: 'transform ease-out 0.45s'
 					}}
 				>
-					{images.map((image, i) => <Slide key={i} image={image} {...this.props} />)}
+					{thumbnails ? (
+						images.map((image, i) => {
+							return <Thumb key={i} image={image} />;
+						})
+					) : (
+							images.map((image, i) => {
+								return <Slide key={i} image={image} />;
+							})
+						)}
 				</div>
 
 				<LeftArrow goToPrevSlide={this.goToPrevSlide} />
@@ -96,12 +140,12 @@ class Carousel extends Component {
 
 Carousel.propTypes = {
 	images: PropTypes.array.isRequired,
-	className: PropTypes.string
+	thumbnails: PropTypes.bool.isRequired
 };
 
 Carousel.defaultProps = {
 	images: [],
-	className: '',
+	thumbnails: false
 };
 
 export default Carousel;

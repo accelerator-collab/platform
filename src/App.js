@@ -144,8 +144,8 @@ function App() {
       <main>
         <Sidebar links={sidebarLinks} />
         <article>
-          {/* <Route exact path="/" component={HomePage} />
-          <Route exact path="/layouts" component={LayoutPage} /> */}
+          {/* <Route exact path="/" component={HomePage} />*/}
+          {/* <Route exact path="/layouts" component={LayoutPage} /> */}
           <Route exact path="/DarkBThemePage" component={DarkBThemePage} />
           <Route exact path="/DarkAThemePage" component={DarkAThemePage} />
         </article>
