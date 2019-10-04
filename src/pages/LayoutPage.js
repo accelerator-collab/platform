@@ -8,9 +8,10 @@ import Graph from '../components/Graph/Graph';
 import Button from '../components/Button/Button';
 import InputBox from '../components/Input/InputBox';
 import Pagination from '../components/Pagination/Pagination';
-import Checkbox from '../components/Checkbox/CheckBox';
+import Checkbox from '../components/Checkbox/Checkbox';
 import RadioButton from '../components/RadioButton/RadioButton';
 import RangeSlider from '../components/RangeSlider/RangeSlider';
+import CheckBoxTwo from '../components/Checkbox/CheckBox2';
 import styles from '../styles/_checkbox.scss';
 import styles2 from '../styles/_rangeSlider.scss';
 import style3 from '../styles/_radiobutton.scss';
@@ -56,8 +57,8 @@ class LayoutPage extends Component {
 			{ name: 'name10', total: 69, count: 10, value: 1023, amount: 60000, color: 'rgba(0,0,0,0.4)' }
 		];
 
-		const btnTypes = ['default', 'danger', 'primary', 'success'];
-		const btnSizes = ['xs', 'sm', 'md', 'lg'];
+		const btnTypes = [ 'default', 'danger', 'primary', 'success' ];
+		const btnSizes = [ 'xs', 'sm', 'md', 'lg' ];
 
 		const radioButtonOptns = [
 			{
@@ -215,92 +216,79 @@ class LayoutPage extends Component {
 					<Card>
 						<h1>Default Check Box</h1>
 						<Checkbox
-							checkBoxStyle={'default'}
+							containerCheckBoxStyle={'default'}
 							labelCheckBoxStyle={'default'}
+							spanStyle={'default'}
 							value="Checked"
 							selected={true}
 							disabled={false}
-							id='13'
 						/>
-						<Checkbox
-							checkBoxStyle={'default'}
-							labelCheckBoxStyle={'default'}
-							value="Unchecked" selected={false} disabled={false} id='12' />
-						<Checkbox
-							checkBoxStyle={'default'}
-							labelCheckBoxStyle={'default'}
-							value="Disabled" selected={true} disabled={true} id='11' />
+						<Checkbox value="Unchecked" selected={false} disabled={true} />
+						<Checkbox value="Disabled" selected={true} disabled={true} />
 
 						<h1>Container Check Box</h1>
 
 						<Checkbox
-							checkBoxStyle={'containerCheckBox'}
+							containerCheckBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
 							value="Option 1"
 							selected={false}
 							disabled={false}
-							id='20'
 						/>
 
 						<Checkbox
-							checkBoxStyle={'containerCheckBox'}
+							containerCheckBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
 							value="Option 2"
 							selected={false}
 							disabled={false}
-							id='30'
 						/>
 
 						<Checkbox
-							checkBoxStyle={'containerCheckBox'}
+							containerCheckBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
 							value="Option 3"
 							selected={false}
 							disabled={false}
-							id='40'
 						/>
 					</Card>
 
 					<Card>
 						<h1>Check Box Slider</h1>
 
-						<Checkbox
+						<CheckBoxTwo
 							checkBoxStyle={'checkboxOne'}
-							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
 							value="CheckBox Slider"
-							id='1'
+							id="1"
 						/>
 
-						<Checkbox
+						<CheckBoxTwo
 							checkBoxStyle={'checkboxTwo'}
-							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
 							value="CheckBox Slider Big"
-							id='4'
+							id="2"
 						/>
 
-						<Checkbox
+						<CheckBoxTwo
 							checkBoxStyle={'checkboxThree'}
-							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
 							value="CheckBox Slider On"
-							id='3'
+							id="3"
 						/>
 
-						<Checkbox
+						<CheckBoxTwo
 							checkBoxStyle={'checkboxFour'}
-							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
 							value="CheckBox Small Check"
-							id='2'
+							id="4"
 						/>
 					</Card>
 				</Layout>
