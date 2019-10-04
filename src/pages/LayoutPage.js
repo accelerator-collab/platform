@@ -11,7 +11,6 @@ import Pagination from '../components/Pagination/Pagination';
 import Checkbox from '../components/Checkbox/Checkbox';
 import RadioButton from '../components/RadioButton/RadioButton';
 import RangeSlider from '../components/RangeSlider/RangeSlider';
-import CheckBoxTwo from '../components/Checkbox/CheckBox2';
 import styles from '../styles/_checkbox.scss';
 import styles2 from '../styles/_rangeSlider.scss';
 import style3 from '../styles/_radiobutton.scss';
@@ -31,17 +30,17 @@ class LayoutPage extends Component {
 
 	render() {
 		const toggleItems = [
-			{ label: 'Test 1', url: 'http://testing.com' },
-			{ label: 'Test 2', url: 'http://testing.com' },
-			{ label: 'Test 3', url: 'http://testing.com' }
+			{ label: 'Test 1', url: 'http://testing.com' },
+			{ label: 'Test 2', url: 'http://testing.com' },
+			{ label: 'Test 3', url: 'http://testing.com' }
 		];
 
 		const barData = [
-			{ name: 'Page A', uv: 4000, pv: 2400, amt: 1300000 },
-			{ name: 'Page B', uv: 3000, pv: 1398, amt: 250000 },
-			{ name: 'Page C', uv: 2000, pv: 9800, amt: 40000 },
-			{ name: 'Page D', uv: 2780, pv: 3908, amt: 370000 },
-			{ name: 'Page E', uv: 1890, pv: 4800, amt: 900000 }
+			{ name: 'Page A', uv: 4000, pv: 2400, amt: 1300000 },
+			{ name: 'Page B', uv: 3000, pv: 1398, amt: 250000 },
+			{ name: 'Page C', uv: 2000, pv: 9800, amt: 40000 },
+			{ name: 'Page D', uv: 2780, pv: 3908, amt: 370000 },
+			{ name: 'Page E', uv: 1890, pv: 4800, amt: 900000 }
 		];
 
 		const donutData = [
@@ -57,33 +56,33 @@ class LayoutPage extends Component {
 			{ name: 'name10', total: 69, count: 10, value: 1023, amount: 60000, color: 'rgba(0,0,0,0.4)' }
 		];
 
-		const btnTypes = [ 'default', 'danger', 'primary', 'success' ];
-		const btnSizes = [ 'xs', 'sm', 'md', 'lg' ];
+		const btnTypes = ['default', 'danger', 'primary', 'success'];
+		const btnSizes = ['xs', 'sm', 'md', 'lg'];
 
 		const radioButtonOptns = [
 			{
 				value: 'option1',
 				name: 'option1',
-				label: 'Option 1'
+				label: 'Option 1'
 			},
 			{
 				value: 'option2',
 				name: 'option2',
-				label: 'Option 2'
+				label: 'Option 2'
 			},
 			{
 				value: 'option3',
 				name: 'option3',
-				label: 'Option 3'
+				label: 'Option 3'
 			}
 		];
 
 		const testImgs = [
 			{
 				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
-				title: 'Design Workspace',
-				subtitle: 'New Courses and activities to learn',
-				button: <button>More Details</button>,
+				title: 'Design Workspace',
+				subtitle: 'New Courses and activities to learn',
+				button: <button>More Details</button>,
 				theme: 'dark'
 			},
 			{
@@ -117,46 +116,46 @@ class LayoutPage extends Component {
 					<Button type="primary" text="disabled" disabled />
 				</Layout>
 				<Layout>
-					<Card>This is the Card 1.</Card>
+					<Card>This is the Card 1.</Card>
 					<Card>
 						<ul>
-							<li>1. Modal</li>
+							<li>1. Modal</li>
 						</ul>
-						<button onClick={this._handleModal}>Toggle Modal</button>
+						<button onClick={this._handleModal}>Toggle Modal</button>
 						{this.state.toggleModal && <BasicModal handleModal={this._handleModal} hideClose={false} />}
 					</Card>
-					<Card>This is the Card 3.</Card>
+					<Card>This is the Card 3.</Card>
 				</Layout>
 				<Layout>
 					<Card>
 						<ul>
-							<li>1. Default dropdown is close</li>
+							<li>1. Default dropdown is close</li>
 							<li>
-								2. If you want to default to default to open. Set the default propTypes 'toggleList =
-								open'
-							</li>
+								2. If you want to default to default to open. Set the default propTypes 'toggleList =
+                                open'
+                            </li>
 						</ul>
-						<Dropdown title="Dropdown Close" toggleList={true} toggleItems={toggleItems} />
+						<Dropdown title="Dropdown Close" toggleList={true} toggleItems={toggleItems} />
 					</Card>
 					<Card>
 						<ul>
-							<li>1. Open dropdown - To open you need to click to the dropdown</li>
+							<li>1. Open dropdown - To open you need to click to the dropdown</li>
 						</ul>
-						<Dropdown title="Dropdown Open" toggleList={false} toggleItems={toggleItems} />
+						<Dropdown title="Dropdown Open" toggleList={false} toggleItems={toggleItems} />
 					</Card>
 				</Layout>
 				<Layout>
 					<Card>
 						<ul>
-							<li>1. Bar Horizontal</li>
-							<li>2. Bar Column</li>
+							<li>1. Bar Horizontal</li>
+							<li>2. Bar Column</li>
 						</ul>
 						<Graph graphType="bar" barClass="bar-horizontal" barData={barData} />
 						<Graph graphType="bar" barData={barData} />
 					</Card>
 					<Card>
 						<ul>
-							<li>1. Donut Graph</li>
+							<li>1. Donut Graph</li>
 						</ul>
 						<Graph graphType="donut" donutData={donutData} />
 					</Card>
@@ -168,11 +167,11 @@ class LayoutPage extends Component {
 					</Layout>
 				</Card>
 
-				{/* <Layout>
-                    <Card>
-                        <Pagination></Pagination>
-                    </Card>
-                </Layout> */}
+				{/* <Layout>
+                    <Card>
+                        <Pagination></Pagination>
+                    </Card>
+                </Layout> */}
 
 				<Layout>
 					<Card>
@@ -187,24 +186,24 @@ class LayoutPage extends Component {
 
 				<Layout>
 					<Card>
-						<h1>Default RangeSlider</h1>
+						<h1>Default RangeSlider</h1>
 						<RangeSlider value={500} min={300} max={4000} />
-						<h1>Colored RangeSlider</h1>
+						<h1>Colored RangeSlider</h1>
 						<RangeSlider rangeSliderStyle={'vertical'} value={500} min={300} max={4000} />
 						<RangeSlider
-							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorGreen'}
+							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorGreen'}
 							value={500}
 							min={300}
 							max={4000}
 						/>
 						<RangeSlider
-							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorRed'}
+							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorRed'}
 							value={500}
 							min={300}
 							max={4000}
 						/>
 						<RangeSlider
-							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorBlue'}
+							rangeSliderStyle={'rangeSlider rangeSlider--bgcolorBlue'}
 							value={500}
 							min={300}
 							max={4000}
@@ -214,81 +213,94 @@ class LayoutPage extends Component {
 
 				<Layout>
 					<Card>
-						<h1>Default Check Box</h1>
+						<h1>Default Check Box</h1>
 						<Checkbox
-							containerCheckBoxStyle={'default'}
+							checkBoxStyle={'default'}
 							labelCheckBoxStyle={'default'}
-							spanStyle={'default'}
 							value="Checked"
 							selected={true}
 							disabled={false}
+							id='13'
 						/>
-						<Checkbox value="Unchecked" selected={false} disabled={true} />
-						<Checkbox value="Disabled" selected={true} disabled={true} />
+						<Checkbox
+							checkBoxStyle={'default'}
+							labelCheckBoxStyle={'default'}
+							value="Unchecked" selected={false} disabled={false} id='12' />
+						<Checkbox
+							checkBoxStyle={'default'}
+							labelCheckBoxStyle={'default'}
+							value="Disabled" selected={true} disabled={true} id='11' />
 
-						<h1>Container Check Box</h1>
+						<h1>Container Check Box</h1>
 
 						<Checkbox
-							containerCheckBoxStyle={'containerCheckBox'}
+							checkBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
-							value="Option 1"
+							value="Option 1"
 							selected={false}
 							disabled={false}
+							id='20'
 						/>
 
 						<Checkbox
-							containerCheckBoxStyle={'containerCheckBox'}
+							checkBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
-							value="Option 2"
+							value="Option 2"
 							selected={false}
 							disabled={false}
+							id='30'
 						/>
 
 						<Checkbox
-							containerCheckBoxStyle={'containerCheckBox'}
+							checkBoxStyle={'containerCheckBox'}
 							labelCheckBoxStyle={'labelCheckBoxStyle'}
 							spanStyle={'checkmark'}
-							value="Option 3"
+							value="Option 3"
 							selected={false}
 							disabled={false}
+							id='40'
 						/>
 					</Card>
 
 					<Card>
-						<h1>Check Box Slider</h1>
+						<h1>Check Box Slider</h1>
 
-						<CheckBoxTwo
+						<Checkbox
 							checkBoxStyle={'checkboxOne'}
+							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
-							value="CheckBox Slider"
-							id="1"
+							value="CheckBox Slider"
+							id='1'
 						/>
 
-						<CheckBoxTwo
+						<Checkbox
 							checkBoxStyle={'checkboxTwo'}
+							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
-							value="CheckBox Slider Big"
-							id="2"
+							value="CheckBox Slider Big"
+							id='4'
 						/>
 
-						<CheckBoxTwo
+						<Checkbox
 							checkBoxStyle={'checkboxThree'}
+							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
-							value="CheckBox Slider On"
-							id="3"
+							value="CheckBox Slider On"
+							id='3'
 						/>
 
-						<CheckBoxTwo
+						<Checkbox
 							checkBoxStyle={'checkboxFour'}
+							labelCheckBoxStyle={'none'}
 							checked={false}
 							disabled={false}
-							value="CheckBox Small Check"
-							id="4"
+							value="CheckBox Small Check"
+							id='2'
 						/>
 					</Card>
 				</Layout>
