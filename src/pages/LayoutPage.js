@@ -84,7 +84,7 @@ class LayoutPage extends Component {
 				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
 				title: 'Design Workspace',
 				subtitle: 'New Courses and activities to learn',
-				action: 'button md',
+				action: 'button',
 				action_label: 'More Details',
 				action_props: {
 					onClick: () => window.alert('TEST')
