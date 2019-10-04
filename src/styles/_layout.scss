@@ -1,7 +1,6 @@
 .layout {
     align-items: flex-start;
     display: flex;
-    padding: 1em;
 
     &--space-between {
         justify-content: space-between;
@@ -15,11 +14,21 @@
         flex-direction: column;
     }
 
-    &--wrap-column {
-        display: flex;
+    &--wrap {
         flex-wrap: wrap;
     }
+}
 
+.wrapper {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 80rem;
+	width: 100%;
+	padding: 0 1.5rem;
+
+	@media (max-width: 768px) { 
+		margin: 0;
+	}
 }
 
 .layout--wrap-column > * {
@@ -29,7 +38,7 @@
 
 @media (max-width: 768px) { 
     .layout {
-        padding: 1em 2em 2em 2em;
+
     }
     
     .layout--wrap-column > * {
@@ -39,7 +48,6 @@
 
 @media (max-width: 414px) { 
     .layout {
-        padding: 1em;
         display: block;
     }
 }

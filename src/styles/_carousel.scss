@@ -2,9 +2,10 @@
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-	height: 500px;
+	height: 676px;
 	overflow: hidden;
 	white-space: nowrap;
+	text-align: center;
 
 	&__wrapper {
 		position: relative;
@@ -20,7 +21,7 @@
 
 	&__button {
 		padding: 1rem;
-		width: 50%;
+		width: 20%;
 		background-color: rgba(204, 204, 204, 0.3);
 		color: #fff;
 		border: 2px solid #fff;
@@ -78,14 +79,23 @@
 
 	&__title {
 		text-align: center;
-		font-size: 3rem;
+		font-size: 90px;
 		z-index: 100;
 		margin-bottom: 1rem;
+		letter-spacing: 0;
 		font-weight: bold;
+		font-family: monospace;
+		color: #FFFFFF;
+		opacity: 0.9;
 	}
 
 	&__subtitle {
 		margin-bottom: 3rem;
+		color: #E5E7E8;
+		font-family: monospace;
+		opacity: 0.81;
+		font-size: 24px;
+
 	}
 
 	&--dark {

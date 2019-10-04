@@ -102,9 +102,9 @@ class Carousel extends Component {
 	};
 
 	render() {
-		const { images, thumbnails } = this.props;
+		const { images, thumbnails, className } = this.props;
 		return (
-			<div className="slider">
+			<div className={`slider ${className}`}>
 				<div
 					className="slider__wrapper"
 					style={{

@@ -58,8 +58,8 @@ class LayoutPage extends Component {
 			{ name: 'name10', total: 69, count: 10, value: 1023, amount: 60000, color: 'rgba(0,0,0,0.4)' }
 		];
 
-		const btnTypes = [ 'default', 'danger', 'primary', 'success' ];
-		const btnSizes = [ 'xs', 'sm', 'md', 'lg' ];
+		const btnTypes = ['default', 'danger', 'primary', 'success'];
+		const btnSizes = ['xs', 'sm', 'md', 'lg'];
 
 		const radioButtonOptns = [
 			{
@@ -84,7 +84,7 @@ class LayoutPage extends Component {
 				img: 'https://brandspace.deloitte.com/downloads/5d7be318f2be9/lg_shutterstock_405027658.eps.png',
 				title: 'Design Workspace',
 				subtitle: 'New Courses and activities to learn',
-				action: 'button',
+				action: 'button md',
 				action_label: 'More Details',
 				action_props: {
 					onClick: () => window.alert('TEST')

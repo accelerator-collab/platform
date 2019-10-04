@@ -1,5 +1,6 @@
 a.cta {
     
+    
     &:hover {
         text-decoration: underline;
     }
@@ -8,26 +9,15 @@ a.cta {
 .cta {
     align-items: center;
     border-radius: 3px;
-    color: $color-white;
+    color: white;
     display: flex;
     justify-content: space-between;
-    margin-right: 15px;
+    // margin-right: 15px;
     min-height: 64px;
     width: 150px;
     padding: 15px;
     text-decoration: none;
     text-transform: capitalize;
-
-    &--xxs {
-        top: 372px;
-        left: 298px;
-        width: 223px;
-        height: 64px;
-    }
-
-    &--xs {
-        width: 100px;
-    }
 
     &--sm {
         width: 150px;
@@ -43,7 +33,6 @@ a.cta {
 
     &--full {
         width: 100%;
-        margin-right: 20px;
         height: 513px;
 
         @media (max-width: 414px) { 
@@ -65,6 +54,33 @@ a.cta {
     &:last-child {
         margin-right: 0px;
     }
+
+    &--borderless {
+        text-align: left;
+        font-weight: 100;
+        font-size: 20px;
+        color: #000;
+        background: none;
+    }
+
+    &--red {
+        background: #F02A3B 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--dark {
+        background: #01161F 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--green {
+        background: #00BE7E 0% 0% no-repeat padding-box;
+        box-shadow: 0px 13px 26px #00402A26;
+    }
+
+    &--round {
+        border-radius: 30px;
+    }
 }
 
 .cta--wimg {
@@ -72,7 +88,8 @@ a.cta {
 }
 
 .cta__desc {
-    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     margin: 10px 0;
     letter-spacing: 0.3px;
     text-align: left;
@@ -102,53 +119,60 @@ a.cta {
     height: 200px;
 }
 
-.cta-borderless {
-    text-align: left;
-    font-weight: 100;
-    font-size: 20px;
-    letter-spacing: 0;
-    color: #000000;
-    opacity: 1;
-    background: none;
-    width: 27%;
-}
-
 .cta__img__holder {
     height: 233px;
     width: 317px;
-    margin-top: -15px;
-    margin-left: -15px;
-    margin-right: -15px;
+    // margin-top: -15px;
+    // margin-left: -15px;
+    // margin-right: -15px;
     background-color: #F4F4F4;
     opacity: 0.9;
     padding-left: 20%;
     padding-top: 5%;
 }
 
-.dark {
-    background: #01161F 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
 .grey-white {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #FFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 30px 50px #00000010;
     border-radius: 6px;
-    letter-spacing: 0;
     color: #777777;
+}
+
+.transparent-green {
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 13px 26px #0095630F;
+    border: 1px solid #00BE7E;
+    color: #00BE7E;
+}
+
+.transparent-white {
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 13px 26px #00956341;
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+
+.transparent-green-radius {
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 13px 26px #0095630F;
+    border: 1px solid #85BC21;
+    border-radius: 30px;
+    color: #85BC21;
 }
 
 .skyblue {
     background-color: #279AF1;
-    opacity: 1;
 }
 
 .cta__title {
     text-align: left;
     font-size: 27px;
     font-family: Avenir;
-    letter-spacing: 0;
     color: #01161F;
-    opacity: 1;
     margin-bottom: -10px;
+}
+
+.cta--center--position{
+    margin-left: 40%;
+    margin-bottom: 10%;
 }
