@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from 'react-router-dom';
 
 
 // Components
@@ -35,11 +35,16 @@ class DarkAThemePage extends Component {
                 img: welcomeBanner1,
                 title: 'Design Workspace',
                 subtitle: 'New Courses and activities to learn',
-                button: <button>More Details</button>,
+                action: Link,
+                action_label: 'Click for details',
+                action_props: {
+                    to: '#'
+                },
                 theme: 'dark'
             },
             {
                 img: welcomeBanner2
+
             },
             {
                 img: welcomeBanner3

@@ -36,13 +36,12 @@ class DarkBThemePage extends Component {
                 img: welcomeBanner1,
                 title: 'Digital Experience',
                 subtitle: 'New Courses and activities to learn',
-                // <CTA
-                //     ctaSize={'lg'}
-                //     ctaDesc={'View all category'}
-                //     ctaIcon={'arrow-right'}
-                //     ctaColor={'transparent-white'}
-                //     tag={Link} />,
-                theme: 'dark'
+                action: 'button',
+                action_label: 'More Details',
+                action_props: {
+                    onClick: () => window.alert('TEST')
+                },
+                theme: 'dark',
             },
             {
                 img: welcomeBanner1
