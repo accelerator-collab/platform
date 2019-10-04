@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import HomePage from './pages/HomePage';
+import HomepageBLight from './pages/HomepageBLight';
+import HomepageALight from './pages/HomepageAlight';
 import LayoutPage from './pages/LayoutPage';
 
 import Header from './components/Header/Header';
@@ -11,6 +13,16 @@ import Sidebar from './components/Sidebar/Sidebar';
 import logo from './assets/deloitte-logo.svg';
 
 const LINKS = [
+  {
+    label: 'A-Light',
+    url: '/a-light',
+    subLabel: 'Sub label 1'
+  },
+  {
+    label: 'B-Light',
+    url: '/b-light',
+    subLabel: 'Sub label 1'
+  },
   {
     label: 'Foreword',
     url: '/',
@@ -52,6 +64,11 @@ const socials = [
 
 const sidebarLinks = [
   {
+    name: 'B-Light',
+    icon: 'scroll',
+    url: '/b-light',
+  },
+  {
     name: 'Foreword',
     icon: 'scroll',
     url: '/',
@@ -90,10 +107,12 @@ function App() {
         siteTitle='DCPDC Newsletter' 
         links={LINKS} 
         logo={logo} />
-      <main className="wrapper">
+      <main>
         <Sidebar links={sidebarLinks} />
-        <article className="wrapper__content">
+        <article>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/a-light" component={HomepageALight} />
+          <Route exact path="/b-light" component={HomepageBLight} />
           <Route exact path="/layouts" component={LayoutPage} />
         </article>
       </main>

@@ -32,28 +32,9 @@ li {
 	list-style: none;
 }
 
-.wrapper {
-	display: flex;
-}
-
-@media (min-width: 768px) {
-	.wrapper {
-		display: flex;
-		max-width: 1024px;
-		margin: auto;
-	}
-}
-
-// .wrapper__content {
-//     margin-left: 80px;
-// }
-
-// .header {
-//     margin-left: 80px;
-// }
-
 // Common
 @import 'common';
+@import 'spacing';
 // Components
 @import 'header';
 @import 'footer';
