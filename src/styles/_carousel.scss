@@ -19,6 +19,51 @@
 	height: 100%;
 	width: 100%;
 
+	&__button {
+		padding: 1rem;
+		width: 50%;
+		background-color: rgba(204, 204, 204, 0.3);
+		color: #fff;
+		border: 2px solid #fff;
+		font-size: 1rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			border: 2px solid #ccc;
+			color: #ccc;
+		}
+	}
+
+	&__link,
+	&__a {
+		&:link {
+			color: #fff;
+		}
+		&:visited {
+			color: #ccc;
+		}
+		&:hover {
+			color: #aaa;
+		}
+	}
+
+	&__image {
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__overlay {
+		background-color: #444;
+		border-radius: inherit;
+		opacity: 0.7;
+	}
+
 	&__bodywrapper {
 		width: 100%;
 		height: 100%;
@@ -90,6 +135,36 @@
 	width: 33.33%;
 	height: 100%;
 	display: inline-block;
+
+	&__button {
+		padding: 1rem;
+		width: 50%;
+		background-color: rgba(204, 204, 204, 0.3);
+		color: #fff;
+		border: 2px solid #fff;
+		font-size: 1rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			border: 2px solid #ccc;
+			color: #ccc;
+		}
+	}
+
+	&__link,
+	&__a {
+		&:link {
+			color: #fff;
+		}
+		&:visited {
+			color: #ccc;
+		}
+		&:hover {
+			color: #aaa;
+		}
+	}
 
 	&__image {
 		background-size: cover;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const LeftArrow = (props) => {
 	return (
@@ -17,40 +18,31 @@ const RightArrow = (props) => {
 	);
 };
 
-const Slide = ({ image }) => {
+const Slide = ({ image, thumbnails }) => {
+	const type = thumbnails ? 'thumbnail' : 'slide';
 	const styles = {
-		backgroundImage: `url(${image.img})`,
-		backgroundSize: 'cover',
-		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'center'
-	};
-	return (
-		<div className="slide" style={styles}>
-			<div className={`slide__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
-				<div className="slide__title">{image.title}</div>
-				<div className="slide__subtitle">{image.subtitle}</div>
-				<div className="slide_button">{image.button}</div>
-			</div>
-		</div>
-	);
-};
-
-const Thumb = ({ image }) => {
-	const style = {
 		backgroundImage: `url(${image.img})`
 	};
 	const overlayStyle = {
 		width: image.title ? '100%' : '0%',
 		height: image.title ? '100%' : '0%'
 	};
+	const Tag = image.action ? image.action : 'div';
 	return (
-		<div className="thumbnail">
-			<div className="thumbnail__image" style={style}>
-				<div className="thumbnail__overlay" style={overlayStyle} />
-				<div className={`thumbnail__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
-					<div className="thumbnail__title">{image.title}</div>
-					<div className="thumbnail__subtitle">{image.subtitle}</div>
-					<div className="thumbnail_button">{image.button}</div>
+		<div className={`${type}`}>
+			<div className={`${type}__image`} style={styles}>
+				<div className={`${type}__overlay`} style={overlayStyle} />
+				<div className={`${type}__bodywrapper ${image.theme === 'dark' ? 'slide--dark' : 'slide--light'}`}>
+					<div className={`${type}__title`}>{image.title}</div>
+					<div className={`${type}__subtitle`}>{image.subtitle}</div>
+					<div className={`${type}__action`}>
+						<Tag
+							className={`${type}__${image.action === Link ? 'link' : image.action}`}
+							{...image.action_props}
+						>
+							{image.action_label}
+						</Tag>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,6 +61,7 @@ class Carousel extends Component {
 
 	goToPrevSlide = () => {
 		if (this.state.currentIndex === 0) return;
+		if (this.state.currentIndex === 2 && this.props.thumbnails) return;
 
 		if (!this.props.thumbnails) {
 			this.setState((prevState) => ({
@@ -119,15 +112,7 @@ class Carousel extends Component {
 						transition: 'transform ease-out 0.45s'
 					}}
 				>
-					{thumbnails ? (
-						images.map((image, i) => {
-							return <Thumb key={i} image={image} />;
-						})
-					) : (
-							images.map((image, i) => {
-								return <Slide key={i} image={image} />;
-							})
-						)}
+					{images.map((image, i) => <Slide key={i} image={image} thumbnails={thumbnails} />)}
 				</div>
 
 				<LeftArrow goToPrevSlide={this.goToPrevSlide} />
