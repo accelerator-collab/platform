@@ -124,9 +124,9 @@
 }
 
 .checkboxThree input[type=checkbox]:checked + label {
-  left: 60px;
-  background: #26ca28;
-}
+    left: 60px;
+    background: #26ca28;
+  }
 
 .checkboxThree input{
   display: none;
@@ -202,7 +202,7 @@
 
 /* with design check */
 .containerCheckBox input {
-  position: absolute;
+  position: absolute; 
   display: none;
   opacity: 20;
   cursor: pointer;
@@ -222,12 +222,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.containerCheckBox:hover input ~ .checkmark {
+.containerCheckBox:hover input + label .checkmark {
   background-color: #ccc
 }
 
 /* When the checkbox is checked, add a blue background */
-.containerCheckBox input:checked ~ .checkmark {
+.containerCheckBox input:checked + label .checkmark {
   background-color: #2196F3;
 }
 
@@ -238,12 +238,12 @@
 }
 
 /* Show the checkmark when checked */
-.containerCheckBox input:checked ~ .checkmark:after {
+.containerCheckBox input:checked + label .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.containerCheckBox .checkmark:after {
+.containerCheckBox label .checkmark:after {
   left: 6px;
   bottom: 3px;
   width: 6px;
@@ -256,4 +256,3 @@
 }
 
 /*styled check box */
-
