@@ -98,7 +98,7 @@ class Carousel extends Component {
 	};
 
 	slideWidth = () => {
-		return document.querySelector('.slide').clientWidth;
+		return document.querySelector('.slider').clientWidth;
 	};
 
 	render() {
